@@ -227,15 +227,17 @@
       <span></span><span></span><span></span>
     </button>
   </div>
-  <nav class="mobile-drawer" id="mobile-drawer" aria-label="모바일 메뉴">
-    <a href="index.html"><span>홈</span><span class="num">01</span></a>
-    <a href="#" data-todo="kmong-profile"><span>조제전당</span><span class="num">02</span></a>
-    <a href="exam.html"><span>시험 정보</span><span class="num">03</span></a>
-    <a href="resources.html"><span>자료실</span><span class="num">04</span></a>
-    <a href="store.html"><span>교재 구매</span><span class="num">05</span></a>
-    <a class="drawer-cta" href="store.html">합격 풀세트 보기</a>
-  </nav>
 </header>
+
+<!-- Mobile Drawer (header 밖에 두어 backdrop-filter stacking context 회피) -->
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="모바일 메뉴">
+  <a href="index.html"><span>홈</span><span class="num">01</span></a>
+  <a href="#" data-todo="kmong-profile"><span>조제전당</span><span class="num">02</span></a>
+  <a href="exam.html"><span>시험 정보</span><span class="num">03</span></a>
+  <a href="resources.html"><span>자료실</span><span class="num">04</span></a>
+  <a href="store.html"><span>교재 구매</span><span class="num">05</span></a>
+  <a class="drawer-cta" href="store.html">합격 풀세트 보기</a>
+</nav>
 
 <!-- ====================== HERO ====================== -->
 <section class="hero">
