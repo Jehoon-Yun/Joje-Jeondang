@@ -23,7 +23,9 @@
   .hero h1 em{font-family:var(--f-italic);color:var(--mocha-500);font-weight:500}
   .hero h1 .brick{color:var(--brick);font-family:var(--f-italic);font-weight:500}
   .hero p.lead{margin-top:24px;font-size:clamp(15px,2.4vw,18px);line-height:1.8;color:var(--ink-700);max-width:540px}
-  .hero-cta{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero-cta{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .hero-cta .btn{min-width:0;padding:14px 16px}
+  @media(min-width:1024px){.hero-cta{display:flex;flex-wrap:wrap;gap:12px}.hero-cta .btn{padding:14px 24px}}
   .hero-meta{
     margin-top:36px;padding-top:20px;border-top:1px solid var(--tan-300);
     display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
@@ -33,34 +35,58 @@
   .hero-meta .v{font-family:var(--f-italic);font-size:clamp(20px,3.2vw,28px);color:var(--ink-900);line-height:1;font-weight:500;letter-spacing:-0.02em}
   .hero-meta .l{font-size:11px;letter-spacing:0.08em;color:var(--mocha-600);margin-top:6px;line-height:1.5}
 
-  /* HERO ART · 화장품 정물 (SVG) */
-  .hero-art{position:relative;aspect-ratio:1/1.1;max-width:520px;width:100%;margin:0 auto;padding:8px}
-  @media(min-width:1024px){.hero-art{margin:0 0 0 auto}}
+  /* HERO ART · 4종 표지 stack */
+  .hero-art{position:relative;aspect-ratio:1/1.05;max-width:520px;width:100%;margin:0 auto;padding:8px}
+  @media(min-width:1024px){.hero-art{margin:0 0 0 auto;aspect-ratio:1/1.1}}
   .hero-art .stage{
     position:absolute;inset:0;
     background:linear-gradient(180deg,var(--paper-50) 0%,var(--cream-200) 100%);
     overflow:hidden;
   }
-  .hero-art .corner{position:absolute;width:32px;height:32px;border:1px solid var(--mocha-500)}
+  .hero-art .corner{position:absolute;width:28px;height:28px;border:1px solid var(--mocha-500);z-index:5}
+  @media(min-width:768px){.hero-art .corner{width:32px;height:32px}}
   .hero-art .corner.tl{top:0;left:0;border-right:none;border-bottom:none}
   .hero-art .corner.tr{top:0;right:0;border-left:none;border-bottom:none}
   .hero-art .corner.bl{bottom:0;left:0;border-right:none;border-top:none}
   .hero-art .corner.br{bottom:0;right:0;border-left:none;border-top:none}
   .hero-art .label{
-    position:absolute;top:18px;right:18px;
-    font-family:var(--f-italic);font-size:11px;
+    position:absolute;top:16px;right:16px;z-index:5;
+    font-family:var(--f-italic);font-size:10px;
     letter-spacing:0.24em;color:var(--mocha-500);text-transform:uppercase;
   }
+  @media(min-width:768px){.hero-art .label{top:18px;right:18px;font-size:11px}}
   .hero-art .label-bl{
-    position:absolute;bottom:18px;left:18px;
-    font-family:var(--f-eyebrow);font-size:10px;
+    position:absolute;bottom:16px;left:16px;z-index:5;
+    font-family:var(--f-eyebrow);font-size:9px;
     letter-spacing:0.32em;color:var(--mocha-600);text-transform:uppercase;
   }
-  .hero-art svg{position:absolute;inset:0;width:100%;height:100%}
-  .float{animation:float 8s ease-in-out infinite}
-  .float-2{animation:float 10s ease-in-out infinite reverse;animation-delay:-2s}
-  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-  @media(prefers-reduced-motion:reduce){.float,.float-2{animation:none}}
+  @media(min-width:768px){.hero-art .label-bl{bottom:18px;left:18px;font-size:10px}}
+  .stack-covers{position:absolute;inset:14%;display:block}
+  .stack-covers .cv{
+    position:absolute;width:48%;aspect-ratio:3/4;
+    background:var(--paper-100);
+    border:1px solid var(--tan-300);
+    box-shadow:0 14px 30px -14px rgba(42,31,24,0.35),0 4px 10px -4px rgba(42,31,24,0.15);
+    overflow:hidden;
+    transition:transform 380ms var(--ease),box-shadow 380ms var(--ease);
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .stack-covers .cv img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .stack-covers .cv-1{top:2%;left:0%;transform:rotate(-7deg);z-index:2}
+  .stack-covers .cv-2{top:0%;left:42%;transform:rotate(4deg);z-index:4}
+  .stack-covers .cv-3{top:42%;left:6%;transform:rotate(-2deg);z-index:3}
+  .stack-covers .cv-4{top:38%;left:48%;transform:rotate(8deg);z-index:1}
+  .stack-covers .cv:hover,.stack-covers .cv:active,.stack-covers .cv:focus-visible{
+    z-index:10;
+    box-shadow:0 22px 44px -16px rgba(42,31,24,0.5),0 6px 14px -4px rgba(42,31,24,0.25);
+    outline:none;
+  }
+  .stack-covers .cv-1:hover,.stack-covers .cv-1:active,.stack-covers .cv-1:focus-visible{transform:rotate(-9deg) translate(-4px,-6px)}
+  .stack-covers .cv-2:hover,.stack-covers .cv-2:active,.stack-covers .cv-2:focus-visible{transform:rotate(2deg) translate(0,-8px)}
+  .stack-covers .cv-3:hover,.stack-covers .cv-3:active,.stack-covers .cv-3:focus-visible{transform:rotate(-3deg) translate(-2px,-7px)}
+  .stack-covers .cv-4:hover,.stack-covers .cv-4:active,.stack-covers .cv-4:focus-visible{transform:rotate(10deg) translate(4px,-6px)}
+  @media(prefers-reduced-motion:reduce){.stack-covers .cv{transition:none}}
 
   /* ============ KPI BAND ============ */
   .kpi-band{background:var(--paper-0);border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900);padding:0;margin-top:24px}
@@ -170,9 +196,9 @@
   /* ============ ABOUT BAND ============ */
   .about{display:grid;gap:32px;align-items:center}
   @media(min-width:1024px){.about{grid-template-columns:1fr 1.2fr;gap:80px}}
-  .about-creds{display:grid;gap:0;border-top:1px solid var(--ink-900)}
-  .about-creds li{list-style:none;padding:14px 0;border-bottom:1px solid var(--tan-300);display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline}
-  .about-creds li .y{font-family:var(--f-italic);font-size:13px;color:var(--mocha-500);letter-spacing:0.18em;width:64px}
+  .about-creds{display:grid;gap:0;border-top:1px solid var(--ink-900);padding:0;margin:0}
+  .about-creds li{list-style:none;padding:14px 0;border-bottom:1px solid var(--tan-300);display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:baseline}
+  .about-creds li .y{font-family:var(--f-italic);font-size:13px;color:var(--mocha-500);letter-spacing:0.16em;white-space:nowrap}
   .about-creds li .t{font-size:14.5px;color:var(--ink-800);line-height:1.65}
   .about-creds li .t b{color:var(--ink-900);font-weight:600}
 
@@ -231,96 +257,27 @@
       </div>
     </div>
 
-    <!-- HERO ART · 화장품 정물 SVG -->
-    <div class="hero-art reveal" aria-hidden="true">
+    <!-- HERO ART · 4종 표지 stack -->
+    <div class="hero-art reveal">
       <div class="stage"></div>
       <span class="corner tl"></span><span class="corner tr"></span>
       <span class="corner bl"></span><span class="corner br"></span>
-      <span class="label">— Vol. 01 / Plate 01</span>
+      <span class="label">— Vol. 01 / Set 4</span>
       <span class="label-bl">Cosmetic Still Life</span>
-      <svg viewBox="0 0 520 572" xmlns="http://www.w3.org/2000/svg">
-        <!-- soft horizon -->
-        <line x1="40" y1="430" x2="480" y2="430" stroke="#C9A57C" stroke-width="0.6" opacity="0.5"/>
-        <line x1="40" y1="436" x2="480" y2="436" stroke="#C9A57C" stroke-width="0.4" opacity="0.3"/>
-
-        <!-- BACK · pump bottle (large) -->
-        <g class="float" transform="translate(190,90)">
-          <!-- shadow -->
-          <ellipse cx="60" cy="346" rx="74" ry="6" fill="#2A1F18" opacity="0.10"/>
-          <!-- pump cap -->
-          <rect x="36" y="0" width="48" height="14" fill="#2A1F18"/>
-          <!-- side spout -->
-          <rect x="0" y="6" width="36" height="11" fill="#2A1F18"/>
-          <!-- neck -->
-          <rect x="48" y="14" width="24" height="8" fill="#2A1F18"/>
-          <!-- shoulder + body -->
-          <path d="M 16 22 L 104 22 L 104 340 Q 104 348 96 348 L 24 348 Q 16 348 16 340 Z" fill="#2A1F18"/>
-          <!-- subtle highlight -->
-          <rect x="22" y="40" width="3" height="280" fill="#5C4A36" opacity="0.6"/>
-          <!-- paper label -->
-          <rect x="22" y="116" width="76" height="180" fill="#F4EFE6"/>
-          <rect x="26" y="120" width="68" height="172" fill="none" stroke="#8C6B4A" stroke-width="0.6"/>
-          <line x1="34" y1="138" x2="86" y2="138" stroke="#8C6B4A" stroke-width="0.5"/>
-          <text x="60" y="134" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="9" fill="#8C6B4A" letter-spacing="2.4">EFFICIENCY 100</text>
-          <text x="60" y="222" text-anchor="middle" font-family="'Gowun Batang',serif" font-size="68" fill="#2A1F18">조</text>
-          <line x1="34" y1="244" x2="86" y2="244" stroke="#8C6B4A" stroke-width="0.5"/>
-          <text x="60" y="260" text-anchor="middle" font-family="'Pretendard',sans-serif" font-size="7" fill="#8C6B4A" letter-spacing="1.6">JOJEJEONDANG</text>
-          <text x="60" y="278" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="7" fill="#8C6B4A" letter-spacing="1.4">EST. 2024</text>
-        </g>
-
-        <!-- FRONT-LEFT · cream tube (cap down) -->
-        <g class="float-2" transform="translate(72,250)">
-          <ellipse cx="48" cy="186" rx="56" ry="5" fill="#2A1F18" opacity="0.10"/>
-          <!-- body (rounded-bottom tube, narrowing to top) -->
-          <path d="M 8 14 L 88 14 L 88 170 Q 88 178 80 178 L 16 178 Q 8 178 8 170 Z" fill="#5C4A36"/>
-          <!-- top crimp / shoulder -->
-          <path d="M 16 14 L 80 14 L 76 4 L 20 4 Z" fill="#5C4A36"/>
-          <!-- cap -->
-          <rect x="20" y="-22" width="56" height="26" fill="#2A1F18"/>
-          <rect x="22" y="-26" width="52" height="4" fill="#2A1F18"/>
-          <!-- label -->
-          <rect x="14" y="50" width="68" height="100" fill="#F4EFE6" opacity="0.95"/>
-          <line x1="22" y1="68" x2="74" y2="68" stroke="#8C6B4A" stroke-width="0.5"/>
-          <text x="48" y="66" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="6.5" fill="#8C6B4A" letter-spacing="2">VOL. 02</text>
-          <text x="48" y="118" text-anchor="middle" font-family="'Gowun Batang',serif" font-size="20" fill="#2A1F18" font-weight="700">필기노트</text>
-          <line x1="22" y1="132" x2="74" y2="132" stroke="#8C6B4A" stroke-width="0.5"/>
-          <text x="48" y="144" text-anchor="middle" font-family="'Pretendard',sans-serif" font-size="6.5" fill="#8C6B4A" letter-spacing="1.4">JOJEJEONDANG</text>
-        </g>
-
-        <!-- FRONT-RIGHT · cream jar -->
-        <g transform="translate(330,300)">
-          <ellipse cx="60" cy="138" rx="68" ry="5" fill="#2A1F18" opacity="0.10"/>
-          <!-- jar body -->
-          <rect x="6" y="34" width="108" height="104" fill="#8C6B4A"/>
-          <!-- lid -->
-          <rect x="0" y="14" width="120" height="22" fill="#2A1F18"/>
-          <!-- lid top edge -->
-          <rect x="4" y="10" width="112" height="6" fill="#2A1F18"/>
-          <!-- label -->
-          <rect x="14" y="60" width="92" height="60" fill="#F4EFE6" opacity="0.95"/>
-          <line x1="24" y1="76" x2="96" y2="76" stroke="#8C6B4A" stroke-width="0.5"/>
-          <text x="60" y="74" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="6.5" fill="#8C6B4A" letter-spacing="2">VOL. 04 · D−40</text>
-          <text x="60" y="100" text-anchor="middle" font-family="'Gowun Batang',serif" font-size="22" fill="#2A1F18" font-weight="700">캘린더</text>
-          <line x1="24" y1="112" x2="96" y2="112" stroke="#8C6B4A" stroke-width="0.5"/>
-        </g>
-
-        <!-- floating stamp -->
-        <g transform="translate(60,90) rotate(-8)">
-          <circle cx="0" cy="0" r="38" fill="none" stroke="#A8423A" stroke-width="0.8"/>
-          <circle cx="0" cy="0" r="32" fill="none" stroke="#A8423A" stroke-width="0.5"/>
-          <text x="0" y="-4" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="9" fill="#A8423A" letter-spacing="2">PASS</text>
-          <text x="0" y="10" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="9" fill="#A8423A" letter-spacing="2">RATE</text>
-          <text x="0" y="24" text-anchor="middle" font-family="'Fraunces',serif" font-size="11" fill="#A8423A" letter-spacing="1" font-weight="500">26.1%</text>
-        </g>
-
-        <!-- corner annotation tag -->
-        <g transform="translate(440,470)">
-          <line x1="0" y1="0" x2="-30" y2="0" stroke="#8C6B4A" stroke-width="0.5"/>
-          <circle cx="-30" cy="0" r="2" fill="#8C6B4A"/>
-          <text x="4" y="-4" font-family="'Cormorant Garamond',serif" font-size="9" fill="#8C6B4A" letter-spacing="2">SET / 4</text>
-          <text x="4" y="10" font-family="'Pretendard',sans-serif" font-size="8" fill="#8C6B4A" letter-spacing="1">EFFICIENCY 100</text>
-        </g>
-      </svg>
+      <div class="stack-covers" aria-label="효율100 풀세트 — 4종 표지">
+        <a class="cv cv-1" href="store.html#theory" aria-label="이론교재 자세히 보기">
+          <img src="images/covers/cover_theory.jpg" alt="효율100 이론교재" loading="eager">
+        </a>
+        <a class="cv cv-2" href="store.html#calendar" aria-label="D-40 스터디 캘린더 자세히 보기">
+          <img src="images/covers/cover_calendar.jpg" alt="효율100 D-40 스터디 캘린더" loading="eager">
+        </a>
+        <a class="cv cv-3" href="store.html#note" aria-label="필기노트 자세히 보기">
+          <img src="images/covers/cover_note.jpg" alt="효율100 필기노트" loading="eager">
+        </a>
+        <a class="cv cv-4" href="store.html#test" aria-label="암기테스트 자세히 보기">
+          <img src="images/covers/cover_test.jpg" alt="효율100 암기테스트" loading="eager">
+        </a>
+      </div>
     </div>
   </div>
 </section>
