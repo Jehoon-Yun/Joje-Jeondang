@@ -237,6 +237,9 @@ h1.hero-title em {
 .hero-visual {
   position: relative;
   height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* HERO 하단 KPI 바 */
@@ -2617,4 +2620,165 @@ footer {
 /* body lock when mobile menu open */
 body.menu-open {
   overflow: hidden;
+}
+
+/* ============================================ */
+/* ===== 실제 표지 이미지 통합 스타일 ===== */
+/* ============================================ */
+
+/* Product card 실제 표지 이미지 */
+.product-cover {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 3/4;
+  margin: 0 auto 28px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  background: var(--cream);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 12px 28px rgba(27, 42, 78, 0.14),
+    0 24px 48px rgba(27, 42, 78, 0.08);
+  border: 1px solid rgba(212, 162, 76, 0.2);
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.product-card:hover .product-cover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 20px 40px rgba(27, 42, 78, 0.18),
+    0 32px 60px rgba(27, 42, 78, 0.10);
+}
+
+/* Resource card 미리보기 이미지 */
+.resource-card.has-preview {
+  padding: 0 0 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+.resource-preview {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  display: block;
+  filter: contrast(1.05);
+}
+.resource-card.has-preview .resource-tag {
+  margin: 24px 28px 18px;
+}
+.resource-card.has-preview h3,
+.resource-card.has-preview p {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+.resource-card.has-preview h3 { margin-bottom: 12px; }
+.resource-card.has-preview p { margin-bottom: 16px; }
+.resource-card.has-preview .meta {
+  position: static;
+  margin: auto 28px 0;
+}
+
+/* Hero 영역의 책 더미 (실제 이미지 + 회전 배치) */
+.hero-book-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5/6;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.hero-book-stack .book {
+  position: absolute;
+  width: 50%;
+  aspect-ratio: 3/4;
+  background: var(--paper);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 16px 36px rgba(27, 42, 78, 0.18),
+    0 32px 60px rgba(27, 42, 78, 0.10);
+  border: 1px solid rgba(212, 162, 76, 0.25);
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hero-book-stack .book img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-book-stack .book.book-1 {
+  top: 8%; left: 6%;
+  transform: rotate(-7deg);
+  z-index: 1;
+}
+.hero-book-stack .book.book-2 {
+  top: 12%; left: 36%;
+  transform: rotate(3deg);
+  z-index: 3;
+}
+.hero-book-stack .book.book-3 {
+  top: 42%; left: 18%;
+  transform: rotate(-2deg);
+  z-index: 2;
+}
+.hero-book-stack .book.book-4 {
+  top: 38%; left: 50%;
+  transform: rotate(8deg);
+  z-index: 1;
+  width: 42%;
+}
+.hero-book-stack:hover .book.book-1 { transform: rotate(-9deg) translate(-4px, -4px); }
+.hero-book-stack:hover .book.book-2 { transform: rotate(2deg) translate(0, -8px); }
+.hero-book-stack:hover .book.book-3 { transform: rotate(-3deg) translate(-2px, -6px); }
+.hero-book-stack:hover .book.book-4 { transform: rotate(10deg) translate(4px, -4px); }
+
+/* 모바일 추가 스타일 */
+@media (max-width: 1024px) {
+  .product-cover {
+    max-width: 180px;
+    margin-bottom: 22px;
+  }
+  .hero-book-stack {
+    max-width: 360px;
+  }
+  .resource-card.has-preview {
+    min-height: 440px;
+  }
+  .resource-preview {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-cover {
+    max-width: 150px;
+    margin-bottom: 18px;
+  }
+  .hero-book-stack {
+    max-width: 300px;
+  }
+  .resource-card.has-preview {
+    min-height: 380px;
+  }
+  .resource-preview {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-cover {
+    max-width: 130px;
+  }
+  .hero-book-stack {
+    max-width: 260px;
+  }
+  .resource-preview {
+    height: 160px;
+  }
 }
