@@ -1,47 +1,68 @@
-// FAQ 토글
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
-}
+/* =============================================================
+   조제전당 — main.js
+   1) 모바일 햄버거 드로어
+   2) 헤더 scroll 상태
+   3) IntersectionObserver scroll-trigger reveal
+   4) FAQ accordion (store.html)
+   ============================================================= */
+(() => {
+  'use strict';
 
-// Reveal on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
+  /* ---------- 1) Mobile drawer ---------- */
+  const ham = document.querySelector('.hamburger');
+  const drawer = document.querySelector('.mobile-drawer');
+  if (ham && drawer) {
+    const toggle = (force) => {
+      const next = typeof force === 'boolean' ? force : ham.getAttribute('aria-expanded') !== 'true';
+      ham.setAttribute('aria-expanded', String(next));
+      drawer.classList.toggle('open', next);
+      document.body.classList.toggle('drawer-open', next);
+    };
+    ham.addEventListener('click', () => toggle());
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') toggle(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth >= 1024) toggle(false); });
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('section h2.section-title, .product-card, .price-card, .schedule-card, .process-step, .foryou-item, .guide-card, .subject-card, .resource-card, .exam-info-card, .dday-mini').forEach(el => {
-    el.classList.add('reveal');
-    observer.observe(el);
-  });
+  /* ---------- 2) Header scrolled state ---------- */
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
-  // 첫 FAQ 자동 오픈
-  const firstFaq = document.querySelector('.faq-item');
-  if (firstFaq) firstFaq.classList.add('open');
-
-  // 모바일 햄버거 메뉴 토글
-  const toggle = document.querySelector('.nav-mobile-toggle');
-  const panel = document.querySelector('.nav-mobile-panel');
-  if (toggle && panel) {
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('nav-mobile-open');
-      document.body.classList.toggle('menu-open');
-    });
-
-    // 패널 안의 링크 클릭 시 닫기 (외부 링크 제외)
-    panel.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (!link.classList.contains('external')) {
-          document.body.classList.remove('nav-mobile-open');
-          document.body.classList.remove('menu-open');
+  /* ---------- 3) Reveal on scroll ---------- */
+  const targets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (targets.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
         }
       });
-    });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(t => io.observe(t));
+  } else {
+    targets.forEach(t => t.classList.add('in'));
   }
-});
+
+  /* ---------- 4) FAQ accordion ---------- */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const ans = item.querySelector('.faq-a');
+    if (!btn || !ans) return;
+    btn.addEventListener('click', () => {
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+      ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0px';
+    });
+  });
+
+  /* ---------- 5) Year stamp ---------- */
+  document.querySelectorAll('[data-year]').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+
+})();

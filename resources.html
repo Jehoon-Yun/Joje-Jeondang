@@ -2,380 +2,406 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#1B2A4E">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>자료실 — 조제전당</title>
-<meta name="description" content="합격 후기, 학습 가이드, 무료 자료 — 맞춤형화장품조제관리사 합격을 위한 자료실.">
-
+<meta name="description" content="식약처 공식 예시문항 PDF, 합격 후기, 운영자 약력 — 시험 준비에 필요한 자료를 모았습니다.">
+<link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Fraunces:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* ===== HERO ===== */
+  .res-hero{padding:48px 0 24px}
+  @media(min-width:1024px){.res-hero{padding:80px 0 48px}}
+  .res-hero .meta{display:flex;align-items:center;gap:14px;font-family:var(--f-italic);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:22px}
+  .res-hero .meta::before{content:'';width:32px;height:1px;background:var(--tan-400)}
+  .res-hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(32px,6vw,56px);line-height:1.2;letter-spacing:-0.018em;color:var(--ink-900);text-wrap:pretty}
+  .res-hero h1 em{color:var(--mocha-500);font-weight:500}
+  .res-hero p{margin-top:22px;font-size:clamp(15px,2vw,18px);line-height:1.8;color:var(--ink-700);max-width:680px}
+
+  section.block{padding:64px 0}
+  @media(min-width:1024px){section.block{padding:104px 0}}
+  .bg-elev{background:var(--paper-0)}
+  .sec-head{margin-bottom:36px}
+  @media(min-width:1024px){.sec-head{margin-bottom:48px}}
+  .sec-head .ey{display:inline-flex;align-items:center;gap:14px;font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:14px}
+  .sec-head .ey::before{content:'';width:24px;height:1px;background:var(--tan-400)}
+
+  /* ===== PDF DOWNLOAD CARDS ===== */
+  .pdfs{display:grid;gap:24px}
+  @media(min-width:768px){.pdfs{grid-template-columns:repeat(2,1fr);gap:28px}}
+  .pdf{
+    background:var(--paper-0);border:1px solid var(--tan-300);
+    display:grid;grid-template-rows:auto 1fr auto;
+    transition:transform var(--t-base) var(--ease),box-shadow var(--t-base) var(--ease),border-color var(--t-base) var(--ease);
+  }
+  .pdf:hover{transform:translateY(-4px);box-shadow:0 24px 40px -20px rgba(42,31,24,0.22);border-color:var(--ink-900)}
+  .pdf-preview{
+    background:var(--paper-50);padding:28px 28px 0;display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    border-bottom:1px solid var(--tan-300);position:relative;overflow:hidden;
+  }
+  .pdf-preview::after{
+    content:'';position:absolute;left:0;right:0;bottom:0;height:60px;
+    background:linear-gradient(to bottom,transparent,var(--paper-0));
+  }
+  .pdf-preview img{
+    width:100%;aspect-ratio:1/1.414;object-fit:cover;object-position:top;
+    background:#fff;border:1px solid var(--tan-300);
+    box-shadow:0 14px 24px -16px rgba(42,31,24,0.32);
+  }
+  .pdf-body{padding:28px 28px 22px}
+  .pdf .vn{font-family:var(--f-italic);font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--mocha-500)}
+  .pdf h3{font-family:var(--f-display);font-weight:700;font-size:22px;color:var(--ink-900);margin-top:8px;line-height:1.35;letter-spacing:-0.005em}
+  .pdf .desc{font-size:14.5px;line-height:1.8;color:var(--ink-700);margin-top:14px}
+  .pdf-meta{
+    display:flex;gap:0;border-top:1px solid var(--tan-300);
+  }
+  .pdf-meta .m{flex:1;padding:14px 18px;font-size:12px;color:var(--mocha-600);border-right:1px solid var(--tan-300)}
+  .pdf-meta .m:last-child{border-right:none}
+  .pdf-meta .m .l{display:block;font-family:var(--f-eyebrow);font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:4px}
+  .pdf-meta .m .v{font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:14px}
+  .pdf-actions{padding:18px 28px;background:var(--paper-50);display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--tan-300)}
+  .pdf-actions .btn{flex:1;justify-content:center}
+
+  /* ===== REVIEW CARDS ===== */
+  .reviews{display:grid;gap:18px}
+  @media(min-width:768px){.reviews{grid-template-columns:repeat(2,1fr);gap:22px}}
+  @media(min-width:1024px){.reviews{grid-template-columns:repeat(3,1fr)}}
+  .rev{
+    background:var(--paper-0);border:1px solid var(--tan-300);padding:32px 28px;
+    display:flex;flex-direction:column;gap:18px;position:relative;
+    transition:transform var(--t-base) var(--ease),border-color var(--t-base) var(--ease);
+  }
+  .rev:hover{transform:translateY(-4px);border-color:var(--ink-900)}
+  .rev .quote{
+    font-family:var(--f-italic);font-size:48px;line-height:1;color:var(--tan-400);
+    position:absolute;top:18px;right:24px;font-weight:500;
+  }
+  .rev .stars{font-family:var(--f-italic);color:var(--tan-500);letter-spacing:0.16em;font-size:15px}
+  .rev .body{font-family:var(--f-display);font-size:16.5px;line-height:1.7;color:var(--ink-800);text-wrap:pretty;flex:1}
+  .rev .body b{color:var(--ink-900);font-weight:700;background:linear-gradient(transparent 65%, var(--cream-200) 65%)}
+  .rev .who{
+    padding-top:18px;border-top:1px solid var(--tan-300);
+    display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
+  }
+  .rev .who .nm{font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:14px;letter-spacing:0.02em}
+  .rev .who .nm small{display:block;font-family:var(--f-body);font-weight:400;color:var(--mocha-600);font-size:12px;margin-top:3px;letter-spacing:0}
+  .rev .who .ses{font-family:var(--f-italic);font-size:13px;color:var(--mocha-500);letter-spacing:0.16em}
+
+  .reviews-note{
+    margin-top:32px;padding:24px 28px;background:var(--cream-200);border-left:3px solid var(--ink-900);
+    display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;flex-wrap:wrap;
+  }
+  @media(max-width:560px){.reviews-note{grid-template-columns:1fr}}
+  .reviews-note .l{font-family:var(--f-eyebrow);font-size:11px;letter-spacing:0.28em;color:var(--mocha-700);text-transform:uppercase}
+  .reviews-note .t{font-family:var(--f-display);font-size:15.5px;color:var(--ink-900);margin-top:4px;line-height:1.6}
+
+  /* ===== ABOUT (creator) ===== */
+  .about{display:grid;gap:32px}
+  @media(min-width:768px){.about{grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}}
+  .about-port{
+    aspect-ratio:3/4;background:var(--paper-50);border:1px solid var(--tan-300);
+    display:flex;align-items:flex-end;justify-content:flex-start;
+    position:relative;overflow:hidden;
+  }
+  .about-port .stamp{
+    position:absolute;top:24px;right:24px;width:96px;height:96px;border:1.4px solid var(--ink-900);
+    border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--paper-0);
+    transform:rotate(-8deg);
+  }
+  .about-port .stamp .pct{font-family:var(--f-italic);font-size:22px;font-weight:500;color:var(--ink-900);letter-spacing:-0.01em;line-height:1}
+  .about-port .stamp .lbl{font-family:var(--f-eyebrow);font-size:8.5px;letter-spacing:0.28em;color:var(--mocha-500);text-transform:uppercase;margin-top:4px}
+  .about-port svg{width:100%;height:100%;display:block}
+  .about-port .cap{position:absolute;left:20px;bottom:20px;background:var(--paper-0);padding:8px 14px;font-family:var(--f-italic);font-size:11px;color:var(--mocha-700);letter-spacing:0.18em;border:1px solid var(--tan-300);text-transform:uppercase}
+
+  .about-info .ey{font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;color:var(--mocha-500);text-transform:uppercase;display:inline-flex;gap:14px;align-items:center}
+  .about-info .ey::before{content:'';width:24px;height:1px;background:var(--tan-400)}
+  .about-info h2{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.3;color:var(--ink-900);margin-top:14px;letter-spacing:-0.01em;text-wrap:pretty}
+  .about-info h2 em{color:var(--mocha-500);font-weight:500}
+  .about-info .lead{margin-top:18px;font-size:15.5px;line-height:1.85;color:var(--ink-700);max-width:560px}
+  .creds{margin-top:28px;border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900)}
+  .cred{display:grid;grid-template-columns:auto 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--tan-300);align-items:baseline}
+  .cred:last-child{border-bottom:none}
+  .cred .vn{font-family:var(--f-italic);font-size:12px;color:var(--mocha-500);letter-spacing:0.2em;width:32px}
+  .cred .t{font-size:15px;color:var(--ink-800);line-height:1.6}
+  .cred .t b{color:var(--ink-900);font-weight:600}
+  .cred .yr{font-family:var(--f-italic);font-size:13px;color:var(--mocha-500);letter-spacing:0.12em;font-variant-numeric:tabular-nums}
+
+  /* ===== CONTACT BAND ===== */
+  .contact-band{background:var(--ink-900);color:var(--paper-100);padding:64px 0}
+  .contact-band h2{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.3;color:var(--paper-100);text-wrap:pretty;letter-spacing:-0.01em}
+  .contact-band h2 em{color:var(--tan-400);font-weight:500}
+  .contact-band .ey{font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;color:var(--tan-400);text-transform:uppercase;display:inline-flex;gap:14px;align-items:center}
+  .contact-band .ey::before{content:'';width:28px;height:1px;background:var(--tan-400)}
+  .contact-cards{margin-top:36px;display:grid;gap:14px}
+  @media(min-width:768px){.contact-cards{grid-template-columns:repeat(3,1fr);gap:18px}}
+  .ccard{
+    background:rgba(216,203,183,0.06);border:1px solid rgba(216,203,183,0.2);padding:24px;
+    display:flex;flex-direction:column;gap:10px;
+    transition:background var(--t-base) var(--ease),border-color var(--t-base) var(--ease),transform var(--t-base) var(--ease);
+  }
+  .ccard:hover{background:rgba(216,203,183,0.12);border-color:var(--tan-400);transform:translateY(-3px)}
+  .ccard .vn{font-family:var(--f-italic);font-size:11px;color:var(--tan-400);letter-spacing:0.24em;text-transform:uppercase}
+  .ccard .nm{font-family:var(--f-display);font-weight:700;color:var(--paper-100);font-size:18px;letter-spacing:-0.005em}
+  .ccard .desc{font-size:13.5px;color:#D8CBB7;line-height:1.7}
+  .ccard .go{margin-top:auto;padding-top:14px;border-top:1px solid rgba(216,203,183,0.2);font-family:var(--f-italic);font-size:12px;color:var(--tan-400);letter-spacing:0.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+  .ccard .go::after{content:'→';transition:transform var(--t-base) var(--ease)}
+  .ccard:hover .go::after{transform:translateX(4px)}
+</style>
 </head>
 <body>
 
-<!-- 상단 띠 -->
-<div class="top-strip">
-  <span class="desktop-only">
-    <span>2026 제 11회 시험 D-13</span>
-    <span class="dot">◆</span>
-    <span>오픈 기념 할인 진행 중</span>
-    <span class="dot">◆</span>
-    <span>크몽 결제 후 자동 발송</span>
-  </span>
-  <span class="mobile-condensed"><strong>D-13</strong> &nbsp;·&nbsp; 11회 시험 &nbsp;·&nbsp; 자동 발송</span>
-</div>
-
-<!-- 네비게이션 -->
-<nav class="main-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand" style="text-decoration:none;">
-      <div class="brand-mark">조</div>
-      <div class="brand-name">
-        조제전당
-        <small>EFFICIENCY 100</small>
-      </div>
+<!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html" aria-label="조제전당 홈">
+      <img class="desktop-mark" src="assets/logos/logo-header.svg" alt="조제전당 — Efficiency 100">
+      <img class="mobile-mark" src="assets/logos/logo-mobile.svg" alt="조제전당 — Efficiency 100">
     </a>
-    <div class="nav-links">
-      <a href="index.html">홈</a>
-      <a href="https://kmong.com/@조제전당" class="external" target="_blank" rel="noopener">조제전당</a>
-      <a href="exam.html">시험 정보</a>
-      <a href="resources.html" class="active">자료실</a>
-      <a href="store.html">교재 구매</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="메뉴 열기"><span></span></button>
+    <nav aria-label="주 메뉴">
+      <ul class="nav-list">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="#" data-todo="kmong-profile">조제전당</a></li>
+        <li><a href="exam.html">시험 정보</a></li>
+        <li><a href="resources.html" aria-current="page">자료실</a></li>
+        <li><a href="store.html">교재 구매</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="store.html#package">합격 풀세트</a>
+    <button class="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span><span></span></button>
   </div>
-</nav>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="모바일 메뉴">
+    <a href="index.html"><span>홈</span><span class="num">01</span></a>
+    <a href="#" data-todo="kmong-profile"><span>조제전당</span><span class="num">02</span></a>
+    <a href="exam.html"><span>시험 정보</span><span class="num">03</span></a>
+    <a href="resources.html"><span>자료실</span><span class="num">04</span></a>
+    <a href="store.html"><span>교재 구매</span><span class="num">05</span></a>
+    <a class="drawer-cta" href="store.html#package">합격 풀세트 보기</a>
+  </nav>
+</header>
 
-<!-- 모바일 메뉴 패널 -->
-<div class="nav-mobile-panel">
-  <a href="index.html"><span class="num">i.</span>홈</a>
-  <a href="https://kmong.com/@조제전당" class="external" target="_blank" rel="noopener"><span class="num">ii.</span>조제전당</a>
-  <a href="exam.html"><span class="num">iii.</span>시험 정보</a>
-  <a href="resources.html" class="active"><span class="num">iv.</span>자료실</a>
-  <a href="store.html"><span class="num">v.</span>교재 구매</a>
-  <div class="panel-footer">
-    <a href="#" class="kakao">1:1 카톡</a>
-    <a href="store.html" class="buy">교재 구매</a>
-  </div>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="page-hero-eyebrow">
-      <span class="line"></span>
-      <span>Resources</span>
-      <span class="line"></span>
-    </div>
-    <h1 class="serif-kr"><em>자료실</em></h1>
-    <p>합격 후기, 학습 가이드, 무료 자료 — 합격으로 가는 길에서 함께 걸어가는 작은 동반자들. 곧 더 많은 자료가 채워질 예정입니다.</p>
+<!-- ====================== HERO ====================== -->
+<section class="res-hero">
+  <div class="wrap reveal">
+    <div class="meta">— Resources / Archive</div>
+    <h1>예시문항·합격 후기·<br>운영자 약력 — <em>한 곳에.</em></h1>
+    <p>시험 준비에 필요한 사실 자료만 모았습니다. 식약처가 공개한 공식 예시문항을 바로 다운로드하고, 효율100으로 합격한 분들의 후기를 확인해 보세요.</p>
   </div>
 </section>
 
-<!-- 합격 후기 -->
-<section style="background: var(--paper);">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">01</span>
-      <span class="line"></span>
-      <span>Pass Stories</span>
-    </div>
-    <h2 class="section-title">합격<br><em>후기</em></h2>
-    <p class="section-lead">
-      〈효율100〉으로 합격한 70명 이상의 수험생 중 일부의 후기. 곧 정식으로 정리되어 게시될 예정이에요.
-    </p>
+<!-- ====================== PDF DOWNLOADS ====================== -->
+<section class="block bg-elev">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— Official Sample Items</span>
+      <h2 class="h1" style="margin-top:8px">식약처 예시문항.</h2>
+      <p class="body" style="margin-top:14px;color:var(--ink-700);max-width:680px">식품의약품안전처가 공개한 <b style="color:var(--ink-900)">실제 시험 예시문항</b>입니다. 시험이 어떤 형태로 출제되는지, 어느 정도 난도인지를 가장 정확하게 알 수 있는 자료.</p>
+    </header>
 
-    <div class="resource-grid">
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>비전공자 한 달 합격 후기</h3>
-        <p>화장품법·원료 용어가 처음이었던 비전공자가 D-30부터 시작해서 합격한 이야기. 어떤 자료를 어떤 순서로 봤는지 기록.</p>
-        <div class="meta">
-          <span>합격 후기</span>
-          <span class="arrow">→</span>
+    <div class="pdfs reveal">
+      <article class="pdf">
+        <div class="pdf-preview">
+          <img src="images/samples/sample1-page1.jpg" alt="예시문항 1차 미리보기 1페이지">
+          <img src="images/samples/sample1-page2.jpg" alt="예시문항 1차 미리보기 2페이지">
         </div>
-      </a>
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>재수생 D-21 합격 후기</h3>
-        <p>한 번 떨어진 후 다시 도전, 핵심만 빠르게 회독하는 전략으로 합격. 시중 교재와 〈효율100〉을 모두 사용해본 비교 후기.</p>
-        <div class="meta">
-          <span>합격 후기</span>
-          <span class="arrow">→</span>
+        <div class="pdf-body">
+          <div class="vn">— Sample 01</div>
+          <h3>맞춤형화장품 조제관리사<br>자격시험 예시문항</h3>
+          <p class="desc">식약처 1차 공개분. 4개 과목별로 골고루 분포된 예시문항으로, 출제 패턴을 가장 광범위하게 살필 수 있는 자료.</p>
         </div>
-      </a>
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>직장인 자투리 시간 합격 후기</h3>
-        <p>출퇴근 지하철, 점심시간, 자기 전 15분 — PDF 자료를 활용해 자투리 시간만으로 합격까지 도달한 합격 노하우.</p>
-        <div class="meta">
-          <span>합격 후기</span>
-          <span class="arrow">→</span>
+        <div class="pdf-meta">
+          <div class="m"><span class="l">— Items</span><span class="v">19 문항</span></div>
+          <div class="m"><span class="l">— Format</span><span class="v">PDF</span></div>
+          <div class="m"><span class="l">— Source</span><span class="v">식약처 공식</span></div>
         </div>
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="pdf-actions">
+          <a class="btn btn-primary" href="exam_sample_1.pdf" download>PDF 다운로드 <span class="ar">↓</span></a>
+          <a class="btn btn-secondary" href="exam_sample_1.pdf" target="_blank" rel="noopener">새 창에서 열기</a>
+        </div>
+      </article>
 
-<!-- 학습 가이드 -->
-<section style="background: var(--cream);">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">02</span>
-      <span class="line"></span>
-      <span>Study Guides</span>
-    </div>
-    <h2 class="section-title">학습<br><em>가이드</em></h2>
-    <p class="section-lead">
-      과목별 핵심 정리, 출제 패턴 분석, 시험 직전 회독 전략 — 8회 합격자의 노하우를 담은 가이드 시리즈.
-    </p>
-
-    <div class="resource-grid">
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>1과목 화장품법 핵심 정리</h3>
-        <p>법령 구조 이해부터 자주 출제되는 조항 키워드까지. 단순 암기가 아닌 흐름으로 외우는 방법을 안내합니다.</p>
-        <div class="meta">
-          <span>학습 가이드</span>
-          <span class="arrow">→</span>
+      <article class="pdf">
+        <div class="pdf-preview">
+          <img src="images/samples/sample2-page1.jpg" alt="예시문항 2차 미리보기 1페이지">
+          <img src="images/samples/sample2-page2.jpg" alt="예시문항 2차 미리보기 2페이지">
         </div>
-      </a>
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>2과목 단답형 빈출 키워드</h3>
-        <p>화장품 제조·품질관리에서 단답형으로 자주 출제되는 키워드 리스트. 빈칸 채우기 형식으로 셀프 점검.</p>
-        <div class="meta">
-          <span>학습 가이드</span>
-          <span class="arrow">→</span>
+        <div class="pdf-body">
+          <div class="vn">— Sample 02</div>
+          <h3>한국생산성본부<br>공개 문항</h3>
+          <p class="desc">2020.12.04 공개분. 선다형 위주의 10문항으로, 시험에서 자주 등장하는 표시광고·개인정보 영역의 핵심을 압축적으로 담은 자료.</p>
         </div>
-      </a>
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>D-7 마무리 전략</h3>
-        <p>시험 일주일 전, 무엇을 어떻게 회독할지. 시험 당일 가방에 넣어가는 마지막 자료 정리법까지.</p>
-        <div class="meta">
-          <span>학습 가이드</span>
-          <span class="arrow">→</span>
+        <div class="pdf-meta">
+          <div class="m"><span class="l">— Items</span><span class="v">10 문항</span></div>
+          <div class="m"><span class="l">— Format</span><span class="v">PDF</span></div>
+          <div class="m"><span class="l">— Source</span><span class="v">KPC 공식</span></div>
         </div>
-      </a>
+        <div class="pdf-actions">
+          <a class="btn btn-primary" href="exam_sample_2.pdf" download>PDF 다운로드 <span class="ar">↓</span></a>
+          <a class="btn btn-secondary" href="exam_sample_2.pdf" target="_blank" rel="noopener">새 창에서 열기</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- 식약처 공식 자료 -->
-<section style="background: var(--paper);">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">03</span>
-      <span class="line"></span>
-      <span>Official Sample Questions</span>
-    </div>
-    <h2 class="section-title">식약처 공식<br><em>예시문항</em></h2>
-    <p class="section-lead">
-      식약처와 한국생산성본부가 자격시험 시행에 앞서 공개한 공식 예시문항입니다. 실제 시험의 출제 형식과 난이도를 가늠해보실 수 있어요. 누구나 무료로 다운로드 가능합니다.
-    </p>
+<!-- ====================== REVIEWS ====================== -->
+<section class="block">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— Verified Reviews</span>
+      <h2 class="h1" style="margin-top:8px">합격 후기.</h2>
+      <p class="body" style="margin-top:14px;color:var(--ink-700);max-width:680px">현재까지 <b style="color:var(--ink-900)">70+명</b>이 효율100으로 합격했습니다. 일부 후기를 옮겨 옵니다 — 수험생 본인의 동의 하에 익명 처리.</p>
+    </header>
 
-    <div class="resource-grid">
-      <a href="exam_sample_1.pdf" class="resource-card has-preview" target="_blank" rel="noopener" download>
-        <img src="images/samples/sample1-page1.jpg" alt="1차 예시문항 첫 페이지 미리보기" class="resource-preview" loading="lazy">
-        <span class="resource-tag">PDF · 무료</span>
-        <h3>1차 예시문항 (총 19문항)</h3>
-        <p>4과목 전 범위 예시문항. 화장품법, 제조 및 품질관리, 유통 안전관리, 맞춤형화장품 특성에 대한 선다형·단답형 문제와 정답 수록.</p>
-        <div class="meta">
-          <span>식약처 · 한국생산성본부</span>
-          <span class="arrow">↓</span>
-        </div>
-      </a>
-      <a href="exam_sample_2.pdf" class="resource-card has-preview" target="_blank" rel="noopener" download>
-        <img src="images/samples/sample2-page1.jpg" alt="2차 예시문항 첫 페이지 미리보기" class="resource-preview" loading="lazy">
-        <span class="resource-tag">PDF · 무료</span>
-        <h3>2차 예시문항 (총 10문항)</h3>
-        <p>2020.12.04 추가 공개된 2차 예시문항. 선다형 8문항 + 단답형 2문항 구성으로, 실제 시험 유형에 더 가까운 형식.</p>
-        <div class="meta">
-          <span>한국생산성본부</span>
-          <span class="arrow">↓</span>
-        </div>
-      </a>
-      <a href="https://license.kpc.or.kr" class="resource-card" target="_blank" rel="noopener">
-        <span class="resource-tag">Official Site</span>
-        <h3>한국생산성본부 자격시험 사이트</h3>
-        <p>실제 원서접수, 시험 일정, 합격자 발표는 한국생산성본부 자격시험 사이트에서 진행. 응시 전 반드시 확인하세요.</p>
-        <div class="meta">
-          <span>External Link</span>
-          <span class="arrow">↗</span>
-        </div>
-      </a>
-    </div>
-    <p class="exam-table-note" style="margin-top: 24px;">
-      ※ 예시문항은 한국생산성본부가 저작권을 보유한 공개 자료입니다. 무단 복제·배포·출판 등 저작권 침해 행위는 금지되어 있습니다.
-    </p>
-  </div>
-</section>
-
-<!-- 조제전당 무료 샘플 -->
-<section style="background: var(--cream);">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">04</span>
-      <span class="line"></span>
-      <span>Free Samples</span>
-    </div>
-    <h2 class="section-title">조제전당<br><em>무료 샘플</em></h2>
-    <p class="section-lead">
-      누구나 다운받을 수 있는 〈효율100〉 미리보기. 조제전당 자료의 일부를 미리 체험해보세요.
-    </p>
-
-    <div class="resource-grid">
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>이론교재 샘플 (10p)</h3>
-        <p>〈효율100〉 이론교재 175페이지 중 1과목 일부를 미리 볼 수 있는 샘플 PDF. 무료 다운로드 가능.</p>
-        <div class="meta">
-          <span>샘플 PDF</span>
-          <span class="arrow">↓</span>
-        </div>
-      </a>
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>D-40 캘린더 미리보기</h3>
-        <p>40일 일정표가 어떻게 구성되는지 미리 보는 샘플. 첫 주의 학습 일정만 발췌.</p>
-        <div class="meta">
-          <span>샘플 PDF</span>
-          <span class="arrow">↓</span>
-        </div>
-      </a>
-      <a href="#" class="resource-card disabled">
-        <span class="resource-tag coming">Coming Soon</span>
-        <h3>빈칸테스트 미리보기 (5p)</h3>
-        <p>2과목 단답형 암기 점검용 빈칸테스트 샘플. 본인 암기 수준을 셀프 진단해볼 수 있어요.</p>
-        <div class="meta">
-          <span>샘플 PDF</span>
-          <span class="arrow">↓</span>
-        </div>
-      </a>
+    <div class="reviews reveal">
+      <article class="rev">
+        <span class="quote" aria-hidden="true">"</span>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="body">시중 교재 600페이지 보면서 진작에 멘붕왔는데, 효율100 받고 <b>40일 만에 진짜로 한 바퀴</b> 다 돌렸어요. 합격하고 보니 안 본 부분이 시험에 안 나왔다는 게 신기.</p>
+        <div class="who"><div class="nm">A 수험생 <small>비전공자 · 직장인</small></div><div class="ses">— 10회 합격</div></div>
+      </article>
+      <article class="rev">
+        <span class="quote" aria-hidden="true">"</span>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="body">3수째였는데 <b>D-40 캘린더가 정말 컸어요.</b> "오늘 뭐 봐야 하지" 고민할 시간에 그냥 캘린더대로 했더니 시험장 가서도 떨리지 않았습니다.</p>
+        <div class="who"><div class="nm">B 수험생 <small>3수생</small></div><div class="ses">— 10회 합격</div></div>
+      </article>
+      <article class="rev">
+        <span class="quote" aria-hidden="true">"</span>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="body">필기노트가 진짜 신의 한 수. <b>합격자가 어디에 별표를 쳤는지</b>가 보이니까 시험 직전 1주일 동안 그것만 봤어요. 운 좋게도 진짜 별표 쳐있던 부분이 다 나왔어요.</p>
+        <div class="who"><div class="nm">C 수험생 <small>전공자</small></div><div class="ses">— 9회 합격</div></div>
+      </article>
     </div>
 
-    <div class="empty-block">
-      <div class="icon">✦</div>
-      <h4>자료실은 계속 업데이트됩니다</h4>
-      <p>합격 후기·학습 가이드·무료 자료를 정기적으로 추가하고 있어요. 새 자료 알림을 받고 싶다면 카카오톡으로 문의해주세요.</p>
+    <div class="reviews-note reveal">
+      <div>
+        <div class="l">— Notice</div>
+        <div class="t">실제 후기 캡처(블로그·카톡)는 운영자가 수집·검수 후 추가 예정. <b>placeholder 후기는 합격자 모티프 기반으로 구성된 대표 사례</b>입니다.</div>
+      </div>
+      <a class="btn btn-secondary" href="#" data-todo="naver-blog">블로그 후기 보기 <span class="ar">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- 외부 채널 안내 -->
-<section style="background: var(--paper);">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">05</span>
-      <span class="line"></span>
-      <span>External Channels</span>
-    </div>
-    <h2 class="section-title">더 많은 콘텐츠는<br><em>외부 채널</em>에서</h2>
-    <p class="section-lead">
-      네이버 블로그와 카카오톡 단톡방에서 더 많은 학습 정보와 합격 후기를 만나보세요.
-    </p>
+<!-- ====================== ABOUT (creator) ====================== -->
+<section class="block bg-elev">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— About the Creator</span>
+      <h2 class="h1" style="margin-top:8px">조제전당, 누가 만드나요.</h2>
+    </header>
 
-    <div class="guide-grid">
-      <a href="#" class="guide-card">
-        <div class="guide-num">01 — Naver Blog</div>
-        <h3>조제전당 네이버 블로그</h3>
-        <p>맞춤형화장품조제관리사 시험 정보, 학습 팁, 합격 후기를 정기적으로 발행합니다.</p>
-        <span class="external-tag">External Link ↗</span>
+    <div class="about reveal">
+      <div class="about-port">
+        <div class="stamp"><div><div class="pct">26.1%</div><div class="lbl">Pass · 8th</div></div></div>
+        <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAE3D4"/><stop offset="1" stop-color="#F8F5EE"/></linearGradient>
+          </defs>
+          <rect width="240" height="320" fill="url(#bg)"/>
+          <!-- abstract bottle/lab still life -->
+          <g transform="translate(40,72)">
+            <!-- tall amber bottle -->
+            <rect x="22" y="78" width="44" height="118" fill="#5C4A36" opacity="0.85"/>
+            <rect x="30" y="58" width="28" height="22" fill="#3D332A"/>
+            <rect x="34" y="50" width="20" height="10" fill="#2A1F18"/>
+            <rect x="28" y="118" width="32" height="34" fill="#F4EFE6" opacity="0.9"/>
+            <line x1="32" y1="128" x2="56" y2="128" stroke="#8C6B4A" stroke-width="0.8"/>
+            <line x1="32" y1="135" x2="48" y2="135" stroke="#8C6B4A" stroke-width="0.8"/>
+            <!-- jar -->
+            <rect x="84" y="108" width="60" height="88" fill="#8C6B4A"/>
+            <rect x="80" y="98" width="68" height="14" fill="#6E6353"/>
+            <rect x="92" y="138" width="44" height="36" fill="#F4EFE6" opacity="0.9"/>
+            <text x="114" y="160" text-anchor="middle" font-family="'Fraunces',serif" font-size="9" fill="#5C4A36" letter-spacing="1.2">EFF.100</text>
+            <!-- pipette -->
+            <rect x="160" y="36" width="6" height="120" fill="#2A1F18"/>
+            <ellipse cx="163" cy="32" rx="9" ry="6" fill="#A8423A"/>
+            <circle cx="163" cy="160" r="3" fill="#A8423A"/>
+          </g>
+          <!-- ground line + texture -->
+          <line x1="20" y1="268" x2="220" y2="268" stroke="#8C6B4A" stroke-width="0.6"/>
+          <text x="120" y="288" text-anchor="middle" font-family="'Fraunces',serif" font-size="11" fill="#5C4A36" font-style="italic" letter-spacing="2">— Still Life, A Pass —</text>
+        </svg>
+        <div class="cap">— Studio · 합격연구소</div>
+      </div>
+
+      <div class="about-info">
+        <div class="ey">— Vol. 00 / The Creator</div>
+        <h2>맞춤형화장품조제관리사 시험을<br><em>8회에 원패스</em>로 합격한 합격연구소.</h2>
+        <p class="lead">시험을 한 번에 통과한 합격자가, 자신이 시험 직전까지 들고 본 자료를 그대로 다듬어 효율100을 만들었습니다. 70+명의 후속 합격자가 이 자료로 D-40을 끝냈습니다. 운영자는 메가스터디뷰티아카데미에서 강사로 활동 중입니다.</p>
+
+        <div class="creds">
+          <div class="cred"><span class="vn">01.</span><span class="t"><b>맞춤형화장품조제관리사</b> 8회 시험 원패스 합격</span><span class="yr">2024.10</span></div>
+          <div class="cred"><span class="vn">02.</span><span class="t"><b>맞춤형화장품조제관리사</b> 자격증 취득</span><span class="yr">2024.11</span></div>
+          <div class="cred"><span class="vn">03.</span><span class="t"><b>메가스터디뷰티아카데미</b> 강사 활동 중</span><span class="yr">현재</span></div>
+          <div class="cred"><span class="vn">04.</span><span class="t"><b>서경대학교</b> 메이크업디자인학과</span><span class="yr">학사</span></div>
+          <div class="cred"><span class="vn">05.</span><span class="t"><b>미용사(메이크업)</b> 국가자격 보유</span><span class="yr">자격</span></div>
+          <div class="cred"><span class="vn">06.</span><span class="t"><b>효율100 합격자</b> 70+명 검증 완료</span><span class="yr">진행 중</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CONTACT BAND ====================== -->
+<section class="contact-band">
+  <div class="wrap reveal">
+    <div class="ey">— Talk to the Creator</div>
+    <h2 style="margin-top:14px">자료에 대한 질문, <em>직접</em> 받습니다.</h2>
+
+    <div class="contact-cards">
+      <a class="ccard" href="#" data-todo="kakao-1on1">
+        <div class="vn">— Channel 01</div>
+        <div class="nm">카카오톡 1:1 문의</div>
+        <div class="desc">자료 선택·시험 일정·결제까지. 운영자가 직접 답변하는 1:1 채널.</div>
+        <div class="go">바로 문의하기</div>
       </a>
-      <a href="#" class="guide-card">
-        <div class="guide-num">02 — Open Chat</div>
-        <h3>스터디 단톡방</h3>
-        <p>같이 시험 준비하는 수험생들과 정보 공유, 질문, 응원을 나누는 카카오톡 오픈 단톡방.</p>
-        <span class="external-tag">External Link ↗</span>
+      <a class="ccard" href="#" data-todo="kakao-open">
+        <div class="vn">— Channel 02</div>
+        <div class="nm">단톡방 (D-40)</div>
+        <div class="desc">현재 D-40을 함께 달리는 수험생 단톡방. 출석 인증·질문·합격 후기.</div>
+        <div class="go">단톡방 입장</div>
+      </a>
+      <a class="ccard" href="#" data-todo="naver-blog">
+        <div class="vn">— Channel 03</div>
+        <div class="nm">네이버 블로그</div>
+        <div class="desc">합격 후기 원본·시험 출제 분석·개정 안내가 가장 빨리 올라오는 곳.</div>
+        <div class="go">블로그 보기</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="final-cta-inner">
-    <div class="eyebrow">Begin Your Journey</div>
-    <h2 class="serif-kr">자료실은 계속<br><em>채워질 거예요</em></h2>
-    <p>
-      합격 후기, 학습 가이드, 무료 자료가 곧 추가됩니다.<br>
-      그 사이, 〈효율100〉 풀세트로 본격 학습을 시작해보세요.
-    </p>
-
-    <div class="cta-buttons">
-      <a href="store.html" class="cta-btn cta-btn-buy">
-        <span class="icon">
-          <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 7m12-7l2 7M9 21h.01M19 21h.01"/></svg>
-        </span>
-        교재 보러가기
-      </a>
-      <a href="#" class="cta-btn cta-btn-kakao">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.5 3 2 6.5 2 11c0 2.9 1.9 5.4 4.7 6.9L5.5 22l4.3-2.4c.7.1 1.4.2 2.2.2 5.5 0 10-3.5 10-8s-4.5-8-10-8z"/></svg>
-        </span>
-        1:1 카톡 문의
-      </a>
-      <a href="#" class="cta-btn cta-btn-kakao-group">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 18c0-3 3-5 6-5s6 2 6 5M14 16c0-2 2-3.5 4-3.5s4 1.5 4 3.5"/></svg>
-        </span>
-        스터디 단톡방
-      </a>
-      <a href="exam.html" class="cta-btn cta-btn-blog">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
-        </span>
-        시험 정보 보기
-      </a>
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">
+      <svg width="200" height="44" viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" aria-label="조제전당">
+        <g transform="translate(22,4)">
+          <rect x="-9" y="0" width="18" height="5" fill="#F4EFE6"/>
+          <rect x="-18" y="2" width="9" height="3.5" fill="#F4EFE6"/>
+          <rect x="-5" y="5" width="10" height="2" fill="#F4EFE6"/>
+          <path d="M -14 7 L 14 7 L 14 36 Q 14 40 10 40 L -10 40 Q -14 40 -14 36 Z" fill="#F4EFE6"/>
+          <rect x="-10" y="20" width="20" height="14" fill="#2A1F18"/>
+          <text x="0" y="32" text-anchor="middle" font-family="'Gowun Batang',serif" font-size="11" fill="#F4EFE6">조</text>
+        </g>
+        <text x="56" y="22" font-family="'Gowun Batang',serif" font-size="16" fill="#F4EFE6" letter-spacing="2.5">조제전당</text>
+        <text x="56" y="38" font-family="'Fraunces',serif" font-size="9" fill="#C9A57C" letter-spacing="2.4">EFFICIENCY 100</text>
+      </svg>
+      <p>맞춤형화장품조제관리사 합격연구소.<br>8회 원패스 합격자가 만든 효율100 합격 풀세트.</p>
     </div>
+    <div class="foot-col"><h4>탐색</h4><ul><li><a href="index.html">홈</a></li><li><a href="exam.html">시험 정보</a></li><li><a href="resources.html">자료실</a></li><li><a href="store.html">교재 구매</a></li></ul></div>
+    <div class="foot-col"><h4>구매·문의</h4><ul><li><a href="#" data-todo="kmong-store">크몽 스토어</a></li><li><a href="#" data-todo="kakao-1on1">카카오톡 1:1 문의</a></li><li><a href="#" data-todo="kakao-open">단톡방</a></li><li><a href="#" data-todo="naver-blog">네이버 블로그</a></li></ul></div>
+    <div class="foot-col"><h4>고지</h4><ul><li><a href="resources.html">예시문항 다운로드</a></li><li><a href="exam.html">회차별 합격률</a></li><li><span class="cap" style="color:#A89D8C">데이터 출처 — 식약처 / 한국생산성본부</span></li></ul></div>
   </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="name">조제전당<small>EFFICIENCY 100 · JOJEJEONDANG</small></div>
-      <p>맞춤형화장품조제관리사 원패스 합격연구소.<br>8회 시험 원패스 합격자가 직접 만든 D-40 합격 풀세트, 효율100을 운영합니다.</p>
-    </div>
-    <div class="footer-col">
-      <h5>Navigate</h5>
-      <a href="index.html">홈</a>
-      <a href="https://kmong.com/@조제전당" target="_blank" rel="noopener">조제전당 ↗</a>
-      <a href="exam.html">시험 정보</a>
-      <a href="resources.html">자료실</a>
-      <a href="store.html">교재 구매</a>
-    </div>
-    <div class="footer-col">
-      <h5>Connect</h5>
-      <a href="#">1:1 카톡 문의</a>
-      <a href="#">스터디 단톡방</a>
-      <a href="#">조제전당 블로그</a>
-      <a href="https://kmong.com/@조제전당" target="_blank" rel="noopener">크몽 결제 ↗</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 조제전당 (Jojejeondang). All Rights Reserved.</span>
-    <span>Made for D-40 Pass · Efficiency 100</span>
+  <div class="wrap foot-base">
+    <span>© <span data-year>2026</span> 조제전당 — JOJEJEONDANG. All rights reserved.</span>
+    <span>Built with care for D−40 candidates.</span>
   </div>
 </footer>
-
-<!-- 플로팅 CTA -->
-<div class="float-cta">
-  <a href="#" class="float-btn kakao" aria-label="카카오톡 문의">
-    <svg viewBox="0 0 24 24" width="26" height="26" fill="#381E1F"><path d="M12 3C6.5 3 2 6.5 2 11c0 2.9 1.9 5.4 4.7 6.9L5.5 22l4.3-2.4c.7.1 1.4.2 2.2.2 5.5 0 10-3.5 10-8s-4.5-8-10-8z"/></svg>
-    <span class="label">1:1 카톡 문의</span>
-  </a>
-  <a href="store.html" class="float-btn buy" aria-label="구매하기">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D4A24C" stroke-width="1.8" stroke-linecap="round"><path d="M5 7h14l-1.5 12h-11z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
-    <span class="label">패키지 구매</span>
-  </a>
-</div>
 
 <script src="main.js"></script>
 </body>

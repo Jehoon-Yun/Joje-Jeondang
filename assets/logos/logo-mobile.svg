@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" width="180" height="40" role="img" aria-label="조제전당 — Efficiency 100">
+  <g transform="translate(18,3)">
+    <rect x="-7" y="0" width="14" height="4" fill="#2A1F18"></rect>
+    <rect x="-14" y="1.5" width="7" height="2.5" fill="#2A1F18"></rect>
+    <rect x="-4" y="4" width="8" height="1.6" fill="#2A1F18"></rect>
+    <path d="M -11 5.6 L 11 5.6 L 11 30 Q 11 33 8 33 L -8 33 Q -11 33 -11 30 Z" fill="#2A1F18"></path>
+    <rect x="-8" y="16" width="16" height="11" fill="#F4EFE6"></rect>
+    <text x="0" y="25" text-anchor="middle" font-family="&#39;Gowun Batang&#39;,serif" font-size="9" fill="#2A1F18">조</text>
+  </g>
+  <text x="46" y="20" font-family="&#39;Gowun Batang&#39;,serif" font-size="15" fill="#2A1F18" letter-spacing="2">조제전당</text>
+  <text x="46" y="33" font-family="&#39;Fraunces&#39;,serif" font-style="italic" font-size="8.5" fill="#8C6B4A" letter-spacing="2">EFFICIENCY 100</text>
+</svg>

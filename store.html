@@ -2,583 +2,392 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#1B2A4E">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="format-detection" content="telephone=no">
-<title>교재 구매 — 조제전당 〈효율100〉 풀세트</title>
-<meta name="description" content="합격률 7.2%까지 떨어졌던 시험을 D-40 안에 통과하는 〈효율100〉 풀세트. 8회 합격자가 만들고 70명 이상이 검증한 압축 자료.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>교재 구매 — 조제전당 효율100 합격 풀세트</title>
+<meta name="description" content="시중교재가 아닌 합격 도구. 효율100 이론교재·필기노트·암기테스트·D-40 캘린더 4종 + 합격 풀세트.">
+<link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Fraunces:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* ============ STORE HERO ============ */
+  .store-hero{padding:48px 0 24px}
+  @media(min-width:1024px){.store-hero{padding:80px 0 48px}}
+  .store-hero .meta{display:flex;align-items:center;gap:14px;font-family:var(--f-italic);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:22px}
+  .store-hero .meta::before{content:'';width:32px;height:1px;background:var(--tan-400)}
+  .store-hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(32px,6vw,56px);line-height:1.2;letter-spacing:-0.018em;color:var(--ink-900);text-wrap:pretty}
+  .store-hero h1 em{color:var(--mocha-500);font-weight:500}
+  .store-hero p{margin-top:22px;font-size:clamp(15px,2vw,18px);line-height:1.8;color:var(--ink-700);max-width:640px}
+
+  /* ============ COMPARE TABLE ============ */
+  section.block{padding:64px 0}
+  @media(min-width:1024px){section.block{padding:104px 0}}
+  .bg-elev{background:var(--paper-0)}
+  .sec-head{margin-bottom:36px}
+  @media(min-width:1024px){.sec-head{margin-bottom:48px}}
+  .sec-head .ey{display:inline-flex;align-items:center;gap:14px;font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:14px}
+  .sec-head .ey::before{content:'';width:24px;height:1px;background:var(--tan-400)}
+
+  .compare{border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900)}
+  .cmp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;border-bottom:1px solid var(--tan-300)}
+  .cmp-row:last-child{border-bottom:none}
+  .cmp-row > *{padding:16px 14px;font-size:14px;line-height:1.7;color:var(--ink-700)}
+  @media(min-width:768px){.cmp-row > *{padding:20px 24px;font-size:15px}}
+  .cmp-head{background:var(--paper-50);border-bottom:1px solid var(--ink-900) !important}
+  .cmp-head > *{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--ink-900);letter-spacing:0.02em}
+  .cmp-head .ours{background:var(--ink-900);color:var(--paper-100);position:relative}
+  .cmp-head .ours::after{content:'EFFICIENCY 100';font-family:var(--f-italic);font-size:9px;color:var(--tan-400);letter-spacing:0.28em;display:block;margin-top:2px;font-weight:400}
+  .cmp-row .lbl{font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:14px}
+  .cmp-row .ours{background:var(--cream-200)}
+  .cmp-row .ours b{color:var(--ink-900);font-weight:700}
+  .cmp-row .typ{color:var(--mocha-600)}
+  .cmp-row .x{color:var(--mocha-500)}
+  .cmp-row .v{color:var(--sage);font-weight:600}
+
+  /* ============ ITEM DETAIL CARD ============ */
+  .vol{padding:64px 0;border-top:1px solid var(--tan-300)}
+  .vol:first-of-type{border-top:none;padding-top:0}
+  @media(min-width:1024px){.vol{padding:96px 0}}
+  .vol-grid{display:grid;gap:32px;align-items:center}
+  @media(min-width:768px){.vol-grid{grid-template-columns:1fr 1.2fr;gap:56px}}
+  .vol.alt .vol-grid{direction:rtl}
+  .vol.alt .vol-grid > *{direction:ltr}
+  .vol-cover{
+    aspect-ratio:3/4;background:var(--paper-50);border:1px solid var(--tan-300);
+    overflow:hidden;position:relative;
+  }
+  .vol-cover img{width:100%;height:100%;object-fit:cover}
+  .vol-cover .badge{
+    position:absolute;top:14px;left:14px;background:var(--paper-0);padding:6px 12px;
+    font-family:var(--f-italic);font-size:11px;letter-spacing:0.24em;color:var(--mocha-700);
+    border:1px solid var(--tan-300);
+  }
+  .vol-info .vnum{font-family:var(--f-italic);font-size:13px;letter-spacing:0.24em;text-transform:uppercase;color:var(--mocha-500)}
+  .vol-info h3{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.25;color:var(--ink-900);margin-top:10px;text-wrap:pretty;letter-spacing:-0.01em}
+  .vol-info h3 em{color:var(--mocha-500);font-weight:500}
+  .vol-info p.lead{font-size:16px;line-height:1.85;color:var(--ink-700);margin-top:18px;max-width:520px}
+  .feats{margin-top:24px;display:grid;gap:10px}
+  .feat{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--tan-300);align-items:baseline}
+  .feat:last-child{border-bottom:none}
+  .feat .num{font-family:var(--f-italic);font-size:12px;color:var(--mocha-500);letter-spacing:0.18em;width:38px}
+  .feat .t{font-size:14.5px;color:var(--ink-800);line-height:1.7}
+  .feat .t b{color:var(--ink-900);font-weight:600}
+  .vol-meta{
+    margin-top:24px;padding:16px 0;border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900);
+    display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  }
+  .vol-meta .pages{font-family:var(--f-display);font-weight:700;font-size:18px;color:var(--ink-900)}
+  .vol-meta .pages span{color:var(--mocha-500);font-weight:400;margin-left:6px}
+  .vol-meta .price{font-family:var(--f-italic);font-size:22px;color:var(--brick);font-weight:500;letter-spacing:-0.01em}
+  .vol-meta .price small{font-size:11px;color:var(--mocha-600);letter-spacing:0.12em;margin-left:8px;font-family:var(--f-body);font-weight:400}
+
+  /* ============ PACKAGE BANNER ============ */
+  .pkg{
+    background:var(--ink-900);color:var(--paper-100);padding:56px 28px;
+    margin-top:24px;display:grid;gap:32px;align-items:center;
+  }
+  @media(min-width:768px){.pkg{padding:80px 56px;grid-template-columns:1.3fr 1fr;gap:56px}}
+  .pkg .ey{color:var(--tan-400);font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;text-transform:uppercase;display:inline-flex;gap:14px;align-items:center}
+  .pkg .ey::before{content:'';width:28px;height:1px;background:var(--tan-400)}
+  .pkg h2{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,4.5vw,42px);line-height:1.25;color:var(--paper-100);margin-top:18px;text-wrap:pretty}
+  .pkg h2 em{color:var(--tan-400);font-weight:500}
+  .pkg p{margin-top:16px;color:#D8CBB7;font-size:15px;line-height:1.85;max-width:520px}
+  .pkg-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+  .pkg-stack{display:grid;gap:10px}
+  .pkg-stack .li{display:grid;grid-template-columns:auto 1fr auto;gap:14px;padding:12px 0;border-bottom:1px solid rgba(216,203,183,0.2);align-items:baseline;font-size:14px;color:#D8CBB7}
+  .pkg-stack .li:last-child{border-bottom:none}
+  .pkg-stack .li .vn{font-family:var(--f-italic);font-size:11px;color:var(--tan-400);letter-spacing:0.2em}
+  .pkg-stack .li .nm{color:var(--paper-100);font-weight:500}
+  .pkg-stack .li .pp{color:#A89D8C;font-size:12px}
+  .pkg-stack .total{
+    display:grid;grid-template-columns:1fr auto;gap:14px;padding:16px 0 0;
+    border-top:1px solid var(--tan-400);align-items:baseline;
+  }
+  .pkg-stack .total .l{font-family:var(--f-display);font-weight:700;color:var(--paper-100);font-size:15px;letter-spacing:0.04em}
+  .pkg-stack .total .v{font-family:var(--f-italic);font-weight:500;color:var(--tan-400);font-size:24px;letter-spacing:-0.01em}
+  .btn-on-ink-primary{background:var(--paper-100);color:var(--ink-900)}
+  .btn-on-ink-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(216,203,183,0.4)}
+  .btn-on-ink-secondary{background:transparent;color:var(--paper-100);border:1.4px solid var(--tan-400)}
+  .btn-on-ink-secondary:hover{background:var(--tan-400);color:var(--ink-900);border-color:var(--tan-400)}
+
+  /* ============ FAQ ============ */
+  .faq-list{border-top:1px solid var(--ink-900)}
+  .faq-item{border-bottom:1px solid var(--tan-300)}
+  .faq-q{
+    width:100%;text-align:left;display:grid;grid-template-columns:auto 1fr auto;gap:18px;
+    padding:22px 4px;align-items:baseline;cursor:pointer;
+  }
+  .faq-q:hover{background:var(--paper-50)}
+  .faq-q .num{font-family:var(--f-italic);font-size:13px;color:var(--mocha-500);letter-spacing:0.2em;width:42px}
+  .faq-q .q{font-family:var(--f-display);font-weight:400;font-size:17px;line-height:1.5;color:var(--ink-900);text-wrap:pretty}
+  .faq-q .ic{
+    width:24px;height:24px;border:1px solid var(--mocha-500);position:relative;
+    transition:transform var(--t-base) var(--ease),background var(--t-base) var(--ease);
+  }
+  .faq-q .ic::before,.faq-q .ic::after{content:'';position:absolute;background:var(--mocha-500);left:50%;top:50%;transition:transform var(--t-base) var(--ease)}
+  .faq-q .ic::before{width:10px;height:1px;transform:translate(-50%,-50%)}
+  .faq-q .ic::after{width:1px;height:10px;transform:translate(-50%,-50%)}
+  .faq-item.open .faq-q .ic{background:var(--ink-900);border-color:var(--ink-900)}
+  .faq-item.open .faq-q .ic::before,.faq-item.open .faq-q .ic::after{background:var(--paper-100)}
+  .faq-item.open .faq-q .ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height var(--t-base) var(--ease)}
+  .faq-a-inner{padding:0 4px 24px 64px;font-size:15px;line-height:1.85;color:var(--ink-700)}
+  .faq-a-inner b{color:var(--ink-900)}
+  @media(max-width:560px){.faq-a-inner{padding-left:4px;padding-right:4px}}
+</style>
 </head>
 <body>
 
-<!-- 상단 띠 -->
-<div class="top-strip">
-  <span class="desktop-only">
-    <span>2026 제 11회 시험 D-13</span>
-    <span class="dot">◆</span>
-    <span>오픈 기념 할인 진행 중</span>
-    <span class="dot">◆</span>
-    <span>크몽 결제 후 자동 발송</span>
-  </span>
-  <span class="mobile-condensed"><strong>D-13</strong> &nbsp;·&nbsp; 11회 시험 &nbsp;·&nbsp; 자동 발송</span>
-</div>
-
-<!-- 네비게이션 -->
-<nav class="main-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand" style="text-decoration:none;">
-      <div class="brand-mark">조</div>
-      <div class="brand-name">
-        조제전당
-        <small>EFFICIENCY 100</small>
-      </div>
+<!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html" aria-label="조제전당 홈">
+      <img class="desktop-mark" src="assets/logos/logo-header.svg" alt="조제전당 — Efficiency 100">
+      <img class="mobile-mark" src="assets/logos/logo-mobile.svg" alt="조제전당 — Efficiency 100">
     </a>
-    <div class="nav-links">
-      <a href="index.html">홈</a>
-      <a href="https://kmong.com/@조제전당" class="external" target="_blank" rel="noopener">조제전당</a>
-      <a href="exam.html">시험 정보</a>
-      <a href="resources.html">자료실</a>
-      <a href="store.html" class="active">교재 구매</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="메뉴 열기"><span></span></button>
+    <nav aria-label="주 메뉴">
+      <ul class="nav-list">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="#" data-todo="kmong-profile">조제전당</a></li>
+        <li><a href="exam.html">시험 정보</a></li>
+        <li><a href="resources.html">자료실</a></li>
+        <li><a href="store.html" aria-current="page">교재 구매</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#package">합격 풀세트</a>
+    <button class="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span><span></span></button>
   </div>
-</nav>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="모바일 메뉴">
+    <a href="index.html"><span>홈</span><span class="num">01</span></a>
+    <a href="#" data-todo="kmong-profile"><span>조제전당</span><span class="num">02</span></a>
+    <a href="exam.html"><span>시험 정보</span><span class="num">03</span></a>
+    <a href="resources.html"><span>자료실</span><span class="num">04</span></a>
+    <a href="store.html"><span>교재 구매</span><span class="num">05</span></a>
+    <a class="drawer-cta" href="#package">합격 풀세트 보기</a>
+  </nav>
+</header>
 
-<!-- 모바일 메뉴 패널 -->
-<div class="nav-mobile-panel">
-  <a href="index.html"><span class="num">i.</span>홈</a>
-  <a href="https://kmong.com/@조제전당" class="external" target="_blank" rel="noopener"><span class="num">ii.</span>조제전당</a>
-  <a href="exam.html"><span class="num">iii.</span>시험 정보</a>
-  <a href="resources.html"><span class="num">iv.</span>자료실</a>
-  <a href="store.html" class="active"><span class="num">v.</span>교재 구매</a>
-  <div class="panel-footer">
-    <a href="#" class="kakao">1:1 카톡</a>
-    <a href="#pricing" class="buy">패키지 보기</a>
+<!-- ====================== HERO ====================== -->
+<section class="store-hero">
+  <div class="wrap reveal">
+    <div class="meta">— Vol. 01–04 / The Efficiency 100</div>
+    <h1>교재가 아니라,<br><em>합격 도구</em>입니다.</h1>
+    <p>175페이지로 압축한 이론, 합격자가 직접 적은 필기노트, 약점만 골라내는 암기테스트, 하루 분량까지 짜둔 D-40 캘린더 — 4종을 따로, 또는 합격 풀세트로.</p>
   </div>
-</div>
+</section>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="page-hero-eyebrow">
-      <span class="line"></span>
-      <span>The Efficiency 100 Series</span>
-      <span class="line"></span>
-    </div>
-    <h1 class="serif-kr">D-40 합격을 위한,<br><em>효율100 풀세트</em></h1>
-    <p>합격률 7.2%까지 떨어졌던 시험을 D-40 안에 통과하는 유일한 방법. 8회 시험 원패스 합격자가 직접 만들고, 메가스터디뷰티아카데미 강의 현장에서 70명 이상이 검증했습니다.</p>
-    <div style="margin-top: 32px;">
-      <a href="#pricing" class="btn-primary">
-        <span>패키지 바로가기 <span class="arrow-icon">↓</span></span>
-      </a>
+<!-- ====================== COMPARE ====================== -->
+<section class="block bg-elev">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— Why Efficiency 100</span>
+      <h2 class="h1" style="margin-top:8px">시중교재로는 시험 범위를 다 볼 수 없습니다.</h2>
+      <p class="body" style="margin-top:14px;color:var(--ink-700);max-width:680px">분량이 많은 게 아니라, <b style="color:var(--ink-900)">시험에 안 나오는 부분이 너무 많습니다.</b> 효율100은 시험에 나올 자리만 골라낸 자료입니다.</p>
+    </header>
+
+    <div class="compare reveal">
+      <div class="cmp-row cmp-head">
+        <div></div>
+        <div>시중 교재</div>
+        <div class="ours">효율100</div>
+      </div>
+      <div class="cmp-row"><div class="lbl">분량</div><div class="typ">600~900p · 두 권 분량</div><div class="ours"><b>175p</b> · 시험 출제 핵심만</div></div>
+      <div class="cmp-row"><div class="lbl">학습 기간</div><div class="typ">3~6개월 권장</div><div class="ours"><b>D−40</b> · 40일 합격 코스</div></div>
+      <div class="cmp-row"><div class="lbl">필기 정리</div><div class="typ x">스스로 다시 정리</div><div class="ours v">합격자 필기노트 그대로</div></div>
+      <div class="cmp-row"><div class="lbl">약점 점검</div><div class="typ x">기출 풀이로만 가늠</div><div class="ours v">암기테스트 (단답·OX)</div></div>
+      <div class="cmp-row"><div class="lbl">학습 일정</div><div class="typ x">스스로 분배</div><div class="ours v">D−40 캘린더 일별 분량</div></div>
+      <div class="cmp-row"><div class="lbl">검증</div><div class="typ">개정판 광고 위주</div><div class="ours v">70+명 합격 사용</div></div>
     </div>
   </div>
 </section>
 
-<!-- WHY / Comparison -->
-<section class="comparison" id="why">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">01</span>
-      <span class="line"></span>
-      <span>The Comparison</span>
-    </div>
-    <h2 class="section-title">왜 시중 교재가 아닌<br><em>효율100</em>이어야 할까요?</h2>
-    <p class="section-lead">
-      시중 교재는 출제 가능성이 낮은 부분까지 빠짐없이 다룹니다.<br>
-      정보는 풍부하지만, 시간이 부족한 수험생에게는 그 두께 자체가 부담입니다.
-    </p>
+<!-- ====================== VOL DETAILS ====================== -->
+<section class="block">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— Set of 4</span>
+      <h2 class="h1" style="margin-top:8px">4가지 자료, 하나의 합격 동선.</h2>
+    </header>
 
-    <div class="compare-grid">
-      <div class="compare-card before">
-        <span class="compare-tag">Before</span>
-        <h3>일반 시중 교재</h3>
-        <div class="compare-pages">750<span class="small">p</span></div>
-        <div class="book-visual">
-          <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oldBook" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#8B7355"/>
-                <stop offset="50%" stop-color="#A89070"/>
-                <stop offset="100%" stop-color="#8B7355"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="140" cy="180" rx="100" ry="6" fill="#000" opacity="0.15"/>
-            <rect x="80" y="40" width="120" height="135" fill="url(#oldBook)" opacity="0.8"/>
-            <g stroke="#6B5840" stroke-width="0.4" opacity="0.5">
-              <line x1="82" y1="50" x2="198" y2="50"/>
-              <line x1="82" y1="56" x2="198" y2="56"/>
-              <line x1="82" y1="62" x2="198" y2="62"/>
-              <line x1="82" y1="68" x2="198" y2="68"/>
-              <line x1="82" y1="74" x2="198" y2="74"/>
-              <line x1="82" y1="80" x2="198" y2="80"/>
-              <line x1="82" y1="86" x2="198" y2="86"/>
-              <line x1="82" y1="92" x2="198" y2="92"/>
-              <line x1="82" y1="98" x2="198" y2="98"/>
-              <line x1="82" y1="104" x2="198" y2="104"/>
-              <line x1="82" y1="110" x2="198" y2="110"/>
-              <line x1="82" y1="116" x2="198" y2="116"/>
-              <line x1="82" y1="122" x2="198" y2="122"/>
-              <line x1="82" y1="128" x2="198" y2="128"/>
-              <line x1="82" y1="134" x2="198" y2="134"/>
-              <line x1="82" y1="140" x2="198" y2="140"/>
-              <line x1="82" y1="146" x2="198" y2="146"/>
-              <line x1="82" y1="152" x2="198" y2="152"/>
-              <line x1="82" y1="158" x2="198" y2="158"/>
-              <line x1="82" y1="164" x2="198" y2="164"/>
-              <line x1="82" y1="170" x2="198" y2="170"/>
-            </g>
-            <rect x="80" y="35" width="120" height="8" fill="#5B4530"/>
-            <text x="140" y="42" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="6" fill="#D4A24C" letter-spacing="2">VOLUMINOUS</text>
-          </svg>
+    <article class="vol reveal" id="theory">
+      <div class="vol-grid">
+        <div class="vol-cover"><span class="badge">VOL. 01</span><img src="images/covers/cover_theory.jpg" alt="효율100 이론교재 표지"></div>
+        <div class="vol-info">
+          <div class="vnum">VOL. 01 · Theory</div>
+          <h3>효율100 <em>이론교재</em><br><span style="font-size:0.6em;color:var(--mocha-500);font-weight:400">175p로 압축한 핵심 이론서</span></h3>
+          <p class="lead">시험에 출제되는 부분만 남겼습니다. 4과목 비중을 그대로 반영해, 4과목(40%)을 가장 깊이 다룹니다. 한 번 정독하고도 시험 범위가 잡힙니다.</p>
+          <div class="feats">
+            <div class="feat"><span class="num">01.</span><span class="t"><b>175페이지 압축.</b> 시중 교재의 약 1/4 분량으로 시험 범위를 모두 커버.</span></div>
+            <div class="feat"><span class="num">02.</span><span class="t"><b>4과목 비중 반영.</b> 출제 비중이 큰 4과목(40%)에 가장 많은 페이지를 할당.</span></div>
+            <div class="feat"><span class="num">03.</span><span class="t"><b>2026 개정 반영.</b> 최신 화장품법 시행규칙 · 식약처 고시 반영.</span></div>
+            <div class="feat"><span class="num">04.</span><span class="t"><b>그림·표 위주.</b> 외울 필요 없는 부분은 시각화로 단축.</span></div>
+          </div>
+          <div class="vol-meta">
+            <div class="pages">175 <span>pages · 2026 ed.</span></div>
+            <a class="btn btn-primary" href="#" data-todo="kmong-theory">크몽에서 구매 <span class="ar">→</span></a>
+          </div>
         </div>
-        <p class="compare-desc">출제 가능성 낮은 부분까지<br>모두 담긴 두꺼운 분량</p>
       </div>
+    </article>
 
-      <div class="compare-arrow">→</div>
-
-      <div class="compare-card after">
-        <span class="compare-tag">After</span>
-        <h3>효율100 풀세트</h3>
-        <div class="compare-pages">175<span class="small">p</span></div>
-        <div class="book-visual">
-          <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="newBook" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#1B2A4E"/>
-                <stop offset="100%" stop-color="#0F1A36"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="140" cy="180" rx="80" ry="5" fill="#000" opacity="0.18"/>
-            <rect x="100" y="55" width="80" height="120" fill="url(#newBook)"/>
-            <rect x="105" y="60" width="70" height="110" fill="none" stroke="#D4A24C" stroke-width="0.6"/>
-            <text x="140" y="98" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#D4A24C" letter-spacing="3">EFFICIENCY</text>
-            <text x="140" y="124" text-anchor="middle" font-family="Cormorant Garamond" font-size="28" fill="#D4A24C" font-weight="500">100</text>
-            <line x1="115" y1="140" x2="165" y2="140" stroke="#D4A24C" stroke-width="0.4" opacity="0.6"/>
-            <text x="140" y="155" text-anchor="middle" font-family="Pretendard" font-size="6" fill="#D4A24C" letter-spacing="2" opacity="0.7">D-40 PASS</text>
-            <rect x="180" y="55" width="3" height="120" fill="#0F1A36"/>
-          </svg>
+    <article class="vol alt reveal" id="note">
+      <div class="vol-grid">
+        <div class="vol-cover"><span class="badge">VOL. 02</span><img src="images/covers/cover_note.jpg" alt="효율100 필기노트 표지"></div>
+        <div class="vol-info">
+          <div class="vnum">VOL. 02 · Hand-Note</div>
+          <h3>효율100 <em>필기노트</em><br><span style="font-size:0.6em;color:var(--mocha-500);font-weight:400">합격자의 필기, 그대로</span></h3>
+          <p class="lead">스스로 다시 정리하지 않아도 됩니다. 8회 합격자가 시험 직전까지 들고 본 필기를 그대로 옮긴 자료입니다. 어디에 형광펜이 있고, 무엇을 별표 쳤는지까지.</p>
+          <div class="feats">
+            <div class="feat"><span class="num">01.</span><span class="t"><b>합격자 필기.</b> 1~10회 출제 흐름이 그대로 묻어 있는 핸드라이팅.</span></div>
+            <div class="feat"><span class="num">02.</span><span class="t"><b>이론교재 연동.</b> 페이지 번호 매칭으로 같이 펼쳐 보기 좋게 설계.</span></div>
+            <div class="feat"><span class="num">03.</span><span class="t"><b>여백 활용.</b> 본인 필기를 더 적을 수 있는 사이드 마진.</span></div>
+          </div>
+          <div class="vol-meta">
+            <div class="pages">68 <span>pages · 핸드라이팅</span></div>
+            <a class="btn btn-primary" href="#" data-todo="kmong-note">크몽에서 구매 <span class="ar">→</span></a>
+          </div>
         </div>
-        <p class="compare-desc">8회 합격자가 직접 압축한<br>시험에 나오는 핵심만 담은 분량</p>
       </div>
-    </div>
+    </article>
 
-    <div class="diff-table">
-      <div class="diff-row">
-        <div class="diff-label">Volume <span class="kr">분량</span></div>
-        <div class="diff-before">시중 교재 750페이지의 부담스러운 두께</div>
-        <div class="diff-vs">/</div>
-        <div class="diff-after">시험에 나오는 핵심만 담은 175페이지로 압축</div>
+    <article class="vol reveal" id="test">
+      <div class="vol-grid">
+        <div class="vol-cover"><span class="badge">VOL. 03</span><img src="images/covers/cover_test.jpg" alt="효율100 암기테스트 표지"></div>
+        <div class="vol-info">
+          <div class="vnum">VOL. 03 · Self-Test</div>
+          <h3>효율100 <em>암기테스트</em><br><span style="font-size:0.6em;color:var(--mocha-500);font-weight:400">약점만 골라내는 자가 점검</span></h3>
+          <p class="lead">단답형과 OX 위주로 구성된, 가벼운 자가 점검용 자료. 모르는 부분만 빠르게 골라내고, 그 자리만 다시 보면 됩니다. 짧은 자투리 시간에 가장 효과가 큰 자료.</p>
+          <div class="feats">
+            <div class="feat"><span class="num">01.</span><span class="t"><b>단답·OX 중심.</b> 한 장당 5분 이내로 끝낼 수 있는 분량.</span></div>
+            <div class="feat"><span class="num">02.</span><span class="t"><b>회독 카운트.</b> 1·2·3회독 표시로 약점 누적 관리.</span></div>
+            <div class="feat"><span class="num">03.</span><span class="t"><b>시험 직전 모드.</b> "외운 것만 다시" 모드용 압축 페이지 별도.</span></div>
+          </div>
+          <div class="vol-meta">
+            <div class="pages">52 <span>pages · 단답+OX</span></div>
+            <a class="btn btn-primary" href="#" data-todo="kmong-test">크몽에서 구매 <span class="ar">→</span></a>
+          </div>
+        </div>
       </div>
-      <div class="diff-row">
-        <div class="diff-label">Format <span class="kr">형식</span></div>
-        <div class="diff-before">무거워서 가방에 안 들어가는 종이책</div>
-        <div class="diff-vs">/</div>
-        <div class="diff-after">휴대폰·태블릿 어디서나 열어볼 수 있는 PDF</div>
+    </article>
+
+    <article class="vol alt reveal" id="calendar">
+      <div class="vol-grid">
+        <div class="vol-cover"><span class="badge">VOL. 04</span><img src="images/covers/cover_calendar.jpg" alt="D-40 스터디 캘린더 표지"></div>
+        <div class="vol-info">
+          <div class="vnum">VOL. 04 · D−40 Calendar</div>
+          <h3><em>D−40</em> 스터디 캘린더<br><span style="font-size:0.6em;color:var(--mocha-500);font-weight:400">하루 분량까지 짜둔 합격 페이스</span></h3>
+          <p class="lead">"오늘 뭐 봐야 하지"의 함정에서 빠져나오기 위한 도구. 시험 40일 전부터 매일 무엇을 볼지 정해져 있어, 망설이지 않고 시작할 수 있습니다.</p>
+          <div class="feats">
+            <div class="feat"><span class="num">01.</span><span class="t"><b>40일 일별 분량.</b> 4과목 비중에 맞춘 페이스 메이커.</span></div>
+            <div class="feat"><span class="num">02.</span><span class="t"><b>주 1회 회고.</b> 한 주 단위로 약점 점검 칸.</span></div>
+            <div class="feat"><span class="num">03.</span><span class="t"><b>시험 직전 7일.</b> "다시 볼 것"만 모은 별도 동선.</span></div>
+          </div>
+          <div class="vol-meta">
+            <div class="pages">D−40 <span>· 40-day plan</span></div>
+            <a class="btn btn-primary" href="#" data-todo="kmong-calendar">크몽에서 구매 <span class="ar">→</span></a>
+          </div>
+        </div>
       </div>
-      <div class="diff-row">
-        <div class="diff-label">Author <span class="kr">집필</span></div>
-        <div class="diff-before">여러 저자의 분담 집필로 일관성 부족</div>
-        <div class="diff-vs">/</div>
-        <div class="diff-after">8회 시험 원패스 합격자 1인의 일관된 집필</div>
-      </div>
-      <div class="diff-row">
-        <div class="diff-label">Verification <span class="kr">검증</span></div>
-        <div class="diff-before">출간 후 검증 데이터 부재</div>
-        <div class="diff-vs">/</div>
-        <div class="diff-after">강의 현장 + 70명 이상의 합격 후기로 검증</div>
-      </div>
-      <div class="diff-row">
-        <div class="diff-label">Pricing <span class="kr">가격</span></div>
-        <div class="diff-before">이론서 한 권 가격으로 부족</div>
-        <div class="diff-vs">/</div>
-        <div class="diff-after">시중 이론서 한 권 가격으로 풀세트 4종</div>
-      </div>
-    </div>
+    </article>
   </div>
 </section>
 
-<!-- PRODUCTS / 4가지 구성 -->
-<section class="products" id="products">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">02</span>
-      <span class="line"></span>
-      <span>The Collection</span>
-    </div>
-    <h2 class="section-title">완벽한 합격을 위한<br><em>네 가지의 구성</em></h2>
-    <p class="section-lead">
-      이론부터 시험 당일 마지막 회독까지, 합격에 필요한 모든 단계를<br>
-      각각의 자료가 정확히 책임집니다.
-    </p>
+<!-- ====================== PACKAGE ====================== -->
+<section class="block bg-elev" id="package">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— The Pass-Set</span>
+      <h2 class="h1" style="margin-top:8px">합격 풀세트 — <em>4종 한 번에.</em></h2>
+    </header>
 
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-num">01 / 04</div>
-        <img src="images/covers/cover_theory.jpg" alt="효율100 이론교재 표지" class="product-cover" loading="lazy">
-        <h3>이론교재</h3>
-        <div class="pages">Theory · 175 pages</div>
-        <p>시중 교재 750페이지에서 시험에 나오는 핵심만 175페이지로 압축. 1과목 화장품법의 이해부터 4과목 맞춤형화장품의 이해까지 전 범위를 커버합니다.</p>
+    <div class="pkg reveal">
+      <div>
+        <div class="ey">D−40 · Set of 4</div>
+        <h2>한 권 한 권 모으지 말고,<br><em>한 번에 D−40을 시작하세요.</em></h2>
+        <p>합격 풀세트는 4종을 모두 묶은 패키지입니다. 이론으로 시작 → 필기노트로 압축 → 암기테스트로 점검 → D-40 캘린더로 일정 관리. 합격까지의 동선이 이 한 세트 안에 다 있습니다.</p>
+        <div class="pkg-cta">
+          <a class="btn btn-on-ink-primary" href="#" data-todo="kmong-package">크몽에서 합격 풀세트 결제 <span class="ar">→</span></a>
+          <a class="btn btn-on-ink-secondary" href="#" data-todo="kakao-1on1">카톡으로 문의</a>
+        </div>
       </div>
-
-      <div class="product-card">
-        <div class="product-num">02 / 04</div>
-        <img src="images/covers/cover_note.jpg" alt="효율100 필기노트 표지" class="product-cover" loading="lazy">
-        <h3>필기노트</h3>
-        <div class="pages">Summary Note · 36 pages</div>
-        <p>시험 직전 1주일 회독용 압축 노트. D-7부터 매일 1회독이 가능한 분량. 자주 출제되는 키워드 중심으로 구성되어, 시험 당일 가방에서 마지막으로 꺼내볼 자료입니다.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-num">03 / 04</div>
-        <img src="images/covers/cover_test.jpg" alt="효율100 암기테스트 표지" class="product-cover" loading="lazy">
-        <h3>암기테스트</h3>
-        <div class="pages">Memory Test · 52 pages</div>
-        <p>2과목 화장품 제조 및 품질관리는 단답형이 많아 암기가 필수. 빈칸 채우기 형식의 셀프 테스트로 암기 완성도를 정확히 점검합니다.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-num">04 / 04</div>
-        <img src="images/covers/cover_calendar.jpg" alt="효율100 D-40 스터디 캘린더 표지" class="product-cover" loading="lazy">
-        <h3>D-40 스터디 캘린더</h3>
-        <div class="pages">Study Calendar · 5 pages</div>
-        <p>40일 만에 합격하는 압축 일정표. 매일 무엇을 봐야 하는지 한눈에 정리되어, 공부 계획을 짜는 시간 자체를 아낄 수 있습니다.</p>
+      <div class="pkg-stack">
+        <div class="li"><span class="vn">VOL. 01</span><span class="nm">이론교재 <span style="color:#A89D8C;font-weight:400">· 175p</span></span><span class="pp">포함</span></div>
+        <div class="li"><span class="vn">VOL. 02</span><span class="nm">필기노트 <span style="color:#A89D8C;font-weight:400">· 68p</span></span><span class="pp">포함</span></div>
+        <div class="li"><span class="vn">VOL. 03</span><span class="nm">암기테스트 <span style="color:#A89D8C;font-weight:400">· 52p</span></span><span class="pp">포함</span></div>
+        <div class="li"><span class="vn">VOL. 04</span><span class="nm">D−40 캘린더 <span style="color:#A89D8C;font-weight:400">· 40-day</span></span><span class="pp">포함</span></div>
+        <div class="total"><span class="l">SET PRICE</span><span class="v">크몽에서 확인</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">03</span>
-      <span class="line"></span>
-      <span>Behind the Making</span>
-    </div>
-    <h2 class="section-title">수험생부터 자료 제작자까지,<br><em>네 시점</em>이 모두 담긴 자료</h2>
-    <p class="section-lead">
-      수험생 → 합격자 → 강사 → 자료 제작자.<br>
-      이 네 가지 시점이 모두 들어간 자료는 흔하지 않습니다.
-    </p>
+<!-- ====================== FAQ ====================== -->
+<section class="block">
+  <div class="wrap-narrow">
+    <header class="sec-head reveal">
+      <span class="ey">— FAQ</span>
+      <h2 class="h1" style="margin-top:8px">자주 묻는 질문.</h2>
+    </header>
 
-    <div class="process-timeline">
-      <div class="process-step left">
-        <div class="content">
-          <h4>직접 시험을 준비하며 학습 노트 작성</h4>
-          <p>합격자가 자격증을 따기 위해 시험을 준비하며 만들기 시작한 학습 노트가 모든 자료의 출발점입니다.</p>
-        </div>
-        <div class="marker">i</div>
-        <div class="spacer"></div>
-      </div>
-      <div class="process-step right">
-        <div class="spacer"></div>
-        <div class="marker">ii</div>
-        <div class="content">
-          <h4>8회 시험 원패스 합격</h4>
-          <p>8회 시험을 한 번에 통과. 시험장에서 직접 확인한 출제 패턴을 가진 합격자가 되었습니다.</p>
-        </div>
-      </div>
-      <div class="process-step left">
-        <div class="content">
-          <h4>출제 패턴 즉시 노트에 반영</h4>
-          <p>시험 직후, 시험장에서 본 문제와 출제 경향을 노트에 즉각 반영. 합격자만이 알 수 있는 디테일이 담겼습니다.</p>
-        </div>
-        <div class="marker">iii</div>
-        <div class="spacer"></div>
-      </div>
-      <div class="process-step right">
-        <div class="spacer"></div>
-        <div class="marker">iv</div>
-        <div class="content">
-          <h4>메가스터디뷰티아카데미 강의 교재로 사용</h4>
-          <p>강사로 활동하며 학원 강의 교재로 직접 사용. 학생들과 매주 마주하는 자료가 되었습니다.</p>
-        </div>
-      </div>
-      <div class="process-step left">
-        <div class="content">
-          <h4>학생 피드백 기반 지속 보완</h4>
-          <p>학생들이 어느 부분에서 막히는지, 어떤 질문이 들어오는지를 체크하며 자료를 계속 다듬었습니다.</p>
-        </div>
-        <div class="marker">v</div>
-        <div class="spacer"></div>
-      </div>
-      <div class="process-step right">
-        <div class="spacer"></div>
-        <div class="marker">vi</div>
-        <div class="content">
-          <h4>70명 이상의 합격 후기로 검증 완료</h4>
-          <p>70명이 넘는 수험생이 효율100으로 시험을 준비하고 합격 후기를 보내주신, 검증된 자료가 되었습니다.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOR YOU -->
-<section class="for-you">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">04</span>
-      <span class="line"></span>
-      <span>For You</span>
-    </div>
-    <h2 class="section-title">이런 분께<br><em>특별히</em> 추천드립니다</h2>
-
-    <div class="foryou-list">
-      <div class="foryou-item">
-        <span class="foryou-num">01</span>
-        <div class="foryou-text">시험까지 <strong>한 달 남짓</strong>, 어디서부터 시작할지 막막한 분</div>
-      </div>
-      <div class="foryou-item">
-        <span class="foryou-num">02</span>
-        <div class="foryou-text">두꺼운 시중 교재를 사놓고 <strong>절반도 못 본 채</strong> 시간만 흐른 분</div>
-      </div>
-      <div class="foryou-item">
-        <span class="foryou-num">03</span>
-        <div class="foryou-text">비전공자라 화장품법·원료 용어가 <strong>외계어처럼</strong> 느껴지는 분</div>
-      </div>
-      <div class="foryou-item">
-        <span class="foryou-num">04</span>
-        <div class="foryou-text">한 번 떨어져서 핵심만 <strong>빠르게 다시</strong> 보고 싶은 재수·n수생</div>
-      </div>
-      <div class="foryou-item">
-        <span class="foryou-num">05</span>
-        <div class="foryou-text">본업·학업과 병행해 <strong>자투리 시간</strong>으로 공부해야 하는 직장인·학생</div>
-      </div>
-      <div class="foryou-item">
-        <span class="foryou-num">06</span>
-        <div class="foryou-text">종이책 들고 다니기 부담스러워 <strong>모바일·태블릿</strong>으로 공부하고 싶은 분</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING (크몽 결제 링크) -->
-<section class="pricing" id="pricing">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">05</span>
-      <span class="line"></span>
-      <span>Choose Your Package</span>
-    </div>
-    <h2 class="section-title">나에게 맞는<br><em>패키지</em>를 선택하세요</h2>
-    <p class="section-lead">
-      현재 학습 단계와 남은 시간에 맞춰 가장 효율적인 조합을 골라보세요.<br>
-      구매 버튼을 누르시면 크몽 결제 페이지로 이동합니다.
-    </p>
-
-    <div class="price-grid">
-      <!-- STANDARD -->
-      <div class="price-card">
-        <div class="price-tag">Standard</div>
-        <h3>필기노트 + 암기테스트</h3>
-        <div class="price-amount">
-          <span class="currency">₩</span>28,000<span class="unit">원</span>
-        </div>
-        <ul class="price-features">
-          <li><span class="check">✓</span>필기노트 36p</li>
-          <li><span class="check">✓</span>암기테스트 52p</li>
-          <li><span class="check">✓</span>크몽 결제 후 자동 발송</li>
-          <li><span class="check">✓</span>1:1 카톡 문의</li>
-        </ul>
-        <div class="price-target">
-          이론 학습은 끝내신 <strong>재수·n수생</strong>,<br>시험 1주 전 핵심 회독이 필요한 분
-        </div>
-        <a href="#" class="price-cta" target="_blank" rel="noopener">크몽에서 구매하기 →</a>
-      </div>
-
-      <!-- PREMIUM (Featured) -->
-      <div class="price-card featured">
-        <div class="price-tag">Premium</div>
-        <h3>D-40 합격 풀세트</h3>
-        <div class="price-amount">
-          <span class="currency">₩</span>58,000<span class="unit">원</span>
-        </div>
-        <ul class="price-features">
-          <li><span class="check">✓</span>이론교재 175p</li>
-          <li><span class="check">✓</span>필기노트 36p</li>
-          <li><span class="check">✓</span>암기테스트 52p</li>
-          <li><span class="check">✓</span>D-40 스터디 캘린더 (단독)</li>
-          <li><span class="check">✓</span>크몽 결제 후 자동 발송</li>
-          <li><span class="check">✓</span>1:1 카톡 문의</li>
-        </ul>
-        <div class="price-target">
-          한 번에 합격을 노리시는 분.<br>단품 2개 합(₩61,000)보다 저렴하고,<br><strong>스터디 캘린더가 추가로 제공</strong>됩니다.
-        </div>
-        <a href="#" class="price-cta" target="_blank" rel="noopener">크몽에서 풀세트 구매 →</a>
-      </div>
-
-      <!-- DELUXE -->
-      <div class="price-card">
-        <div class="price-tag">Deluxe</div>
-        <h3>이론 단권</h3>
-        <div class="price-amount">
-          <span class="currency">₩</span>33,000<span class="unit">원</span>
-        </div>
-        <ul class="price-features">
-          <li><span class="check">✓</span>이론교재 175p</li>
-          <li><span class="check">✓</span>1과목 ~ 4과목 전 범위</li>
-          <li><span class="check">✓</span>크몽 결제 후 자동 발송</li>
-          <li><span class="check">✓</span>1:1 카톡 문의</li>
-        </ul>
-        <div class="price-target">
-          시험을 <strong>처음 준비</strong>하시는 분,<br>이론부터 차근차근 보고 싶은 분
-        </div>
-        <a href="#" class="price-cta" target="_blank" rel="noopener">크몽에서 구매하기 →</a>
-      </div>
-    </div>
-    <p class="exam-table-note" style="margin-top: 32px; text-align: center;">
-      ※ 모든 결제는 크몽에서 이루어지며, 결제 완료 시 PDF 파일이 자동 발송됩니다.
-    </p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="section-wrap">
-    <div class="section-eyebrow">
-      <span class="num">06</span>
-      <span class="line"></span>
-      <span>Frequently Asked</span>
-    </div>
-    <h2 class="section-title">자주 묻는<br><em>질문</em></h2>
-
-    <div class="faq-list">
+    <div class="faq-list reveal">
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text"><span class="num">Q.01</span><span>자료는 어떤 형태로 받게 되나요?</span></div>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>PDF 파일을 ZIP으로 묶어 발송해 드립니다. PC·태블릿·핸드폰 모두에서 열어보실 수 있고, 회독 학습을 위해 필요한 부분만 인쇄하셔도 됩니다.</p>
-        </div>
+        <button class="faq-q" aria-expanded="false"><span class="num">Q.01</span><span class="q">정말 175페이지로 시험 범위가 다 들어가나요?</span><span class="ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">시험에 <b>출제된 적이 없는 부분</b>은 빼고, 출제 비중대로 압축했습니다. 시중 교재의 분량이 많은 이유는 시험에 안 나오는 화장품학 일반 지식이 함께 들어있기 때문입니다. 효율100은 식약처가 공개한 시험 범위·예시문항·1~10회 출제 흐름을 기준으로 만들었습니다.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text"><span class="num">Q.02</span><span>크몽 결제 후 언제 받을 수 있나요?</span></div>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>크몽에서 결제 완료 시 자동 발송됩니다. 시험이 임박하신 분은 결제 후 1:1 카톡 문의로 알려주시면 가능한 한 빠르게 확인 후 발송해 드립니다.</p>
-        </div>
+        <button class="faq-q" aria-expanded="false"><span class="num">Q.02</span><span class="q">비전공자인데 따라갈 수 있나요?</span><span class="ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">현재까지 검증된 70+명 중 다수가 비전공자였습니다. 효율100은 <b>"이미 알고 있다"는 가정 없이</b> 처음 보는 사람도 따라갈 수 있게 설계되었습니다. D-40 캘린더가 매일 분량까지 잡아주기 때문에, 결심만 있으면 됩니다.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text"><span class="num">Q.03</span><span>비전공자도 따라갈 수 있을까요?</span></div>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>네, 효율100은 메가스터디뷰티아카데미 강의 현장에서 비전공자 학생들의 질문과 이해도를 반영하며 다듬어진 자료입니다. 화장품법·원료 용어가 처음이신 분도 시험에 필요한 만큼은 충분히 따라가실 수 있도록 설계되어 있습니다.</p>
-        </div>
+        <button class="faq-q" aria-expanded="false"><span class="num">Q.03</span><span class="q">받는 형태는 PDF인가요, 책인가요?</span><span class="ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">전자 자료(PDF) 형태로 제공됩니다. 결제는 모두 <b>크몽</b>을 통해 진행되며, 결제 후 즉시 다운로드 가능합니다. 인쇄 후 사용을 권장하며, 자세한 안내는 크몽 상품 상세 페이지를 참고해 주세요.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text"><span class="num">Q.04</span><span>환불은 가능한가요?</span></div>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>본 자료는 디지털 콘텐츠 특성상 다운로드 후 단순 변심에 의한 환불은 제한됩니다. 크몽의 환불 규정과 「전자상거래 등에서의 소비자보호에 관한 법률」을 따릅니다. 자세한 사항은 크몽 결제 페이지의 환불 안내를 확인해주세요.</p>
-        </div>
+        <button class="faq-q" aria-expanded="false"><span class="num">Q.04</span><span class="q">환불·교환 정책은 어떻게 되나요?</span><span class="ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">디지털 자료 특성상 <b>다운로드 후 환불이 어려운 상품</b>입니다. 결제 전 미리보기·예시문항을 통해 자료 성격을 확인해 주세요. 자료 자체에 오탈자·누락이 있을 경우 즉시 교환·재발송을 도와드립니다. 기타 문의는 카톡 1:1로 받습니다.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text"><span class="num">Q.05</span><span>구매 후에도 질문할 수 있나요?</span></div>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>네, 1:1 카톡 또는 크몽 메시지로 자료 관련 질문을 받습니다. 단순 자료 사용 안내부터 학습 중 막히는 부분까지, 합격자가 직접 답변해 드립니다.</p>
-        </div>
+        <button class="faq-q" aria-expanded="false"><span class="num">Q.05</span><span class="q">2026년 개정 시험에도 그대로 사용할 수 있나요?</span><span class="ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">2026 개정판은 가장 최근 식약처 고시·시행규칙을 반영한 버전입니다. 11회(2026.05.23) · 12회(2026.09.19) 시험 모두 이 개정판으로 응시 가능합니다. 향후 큰 개정이 있을 경우 별도 업데이트 자료를 제공합니다.</div></div>
       </div>
+    </div>
+
+    <div style="margin-top:36px;padding:20px 24px;background:var(--paper-0);border:1px solid var(--tan-300);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <div><div class="cap" style="text-transform:uppercase;letter-spacing:0.18em;color:var(--mocha-500)">More questions</div><div style="font-family:var(--f-display);font-size:17px;color:var(--ink-900);margin-top:4px">카톡 1:1 문의로 바로 답변 받기</div></div>
+      <a class="btn btn-secondary" href="#" data-todo="kakao-1on1">카톡으로 문의 <span class="ar">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="final-cta-inner">
-    <div class="eyebrow">Begin Your Journey</div>
-    <h2 class="serif-kr">지금 시작해도<br><em>충분합니다</em></h2>
-    <p>
-      8회 합격자가 직접 만들고, 강의 현장에서 검증하고, 70명 이상이 선택한 D-40 일정표대로<br>
-      따라오시면, 두꺼운 교재 끝까지 보지 않아도 시험장에서 답을 적을 수 있습니다.
-    </p>
-
-    <div class="cta-buttons">
-      <a href="#" class="cta-btn cta-btn-buy" target="_blank" rel="noopener">
-        <span class="icon">
-          <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 7m12-7l2 7M9 21h.01M19 21h.01"/></svg>
-        </span>
-        크몽에서 구매하기
-      </a>
-      <a href="#" class="cta-btn cta-btn-kakao">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.5 3 2 6.5 2 11c0 2.9 1.9 5.4 4.7 6.9L5.5 22l4.3-2.4c.7.1 1.4.2 2.2.2 5.5 0 10-3.5 10-8s-4.5-8-10-8z"/></svg>
-        </span>
-        1:1 카톡 문의
-      </a>
-      <a href="#" class="cta-btn cta-btn-kakao-group">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 18c0-3 3-5 6-5s6 2 6 5M14 16c0-2 2-3.5 4-3.5s4 1.5 4 3.5"/></svg>
-        </span>
-        스터디 단톡방
-      </a>
-      <a href="#" class="cta-btn cta-btn-blog">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 8v8l6-4z" fill="currentColor"/></svg>
-        </span>
-        조제전당 블로그
-      </a>
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand">
+      <svg width="200" height="44" viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" aria-label="조제전당">
+        <g transform="translate(22,4)">
+          <rect x="-9" y="0" width="18" height="5" fill="#F4EFE6"/>
+          <rect x="-18" y="2" width="9" height="3.5" fill="#F4EFE6"/>
+          <rect x="-5" y="5" width="10" height="2" fill="#F4EFE6"/>
+          <path d="M -14 7 L 14 7 L 14 36 Q 14 40 10 40 L -10 40 Q -14 40 -14 36 Z" fill="#F4EFE6"/>
+          <rect x="-10" y="20" width="20" height="14" fill="#2A1F18"/>
+          <text x="0" y="32" text-anchor="middle" font-family="'Gowun Batang',serif" font-size="11" fill="#F4EFE6">조</text>
+        </g>
+        <text x="56" y="22" font-family="'Gowun Batang',serif" font-size="16" fill="#F4EFE6" letter-spacing="2.5">조제전당</text>
+        <text x="56" y="38" font-family="'Fraunces',serif" font-size="9" fill="#C9A57C" letter-spacing="2.4">EFFICIENCY 100</text>
+      </svg>
+      <p>맞춤형화장품조제관리사 합격연구소.<br>8회 원패스 합격자가 만든 효율100 합격 풀세트.</p>
     </div>
+    <div class="foot-col"><h4>탐색</h4><ul><li><a href="index.html">홈</a></li><li><a href="exam.html">시험 정보</a></li><li><a href="resources.html">자료실</a></li><li><a href="store.html">교재 구매</a></li></ul></div>
+    <div class="foot-col"><h4>구매·문의</h4><ul><li><a href="#" data-todo="kmong-store">크몽 스토어</a></li><li><a href="#" data-todo="kakao-1on1">카카오톡 1:1 문의</a></li><li><a href="#" data-todo="kakao-open">단톡방</a></li><li><a href="#" data-todo="naver-blog">네이버 블로그</a></li></ul></div>
+    <div class="foot-col"><h4>고지</h4><ul><li><a href="resources.html">예시문항 다운로드</a></li><li><a href="exam.html">회차별 합격률</a></li><li><span class="cap" style="color:#A89D8C">데이터 출처 — 식약처 / 한국생산성본부</span></li></ul></div>
   </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="name">조제전당<small>EFFICIENCY 100 · JOJEJEONDANG</small></div>
-      <p>맞춤형화장품조제관리사 원패스 합격연구소.<br>8회 시험 원패스 합격자가 직접 만든 D-40 합격 풀세트, 효율100을 운영합니다.</p>
-    </div>
-    <div class="footer-col">
-      <h5>Navigate</h5>
-      <a href="index.html">홈</a>
-      <a href="https://kmong.com/@조제전당" target="_blank" rel="noopener">조제전당 ↗</a>
-      <a href="exam.html">시험 정보</a>
-      <a href="resources.html">자료실</a>
-      <a href="store.html">교재 구매</a>
-    </div>
-    <div class="footer-col">
-      <h5>Connect</h5>
-      <a href="#">1:1 카톡 문의</a>
-      <a href="#">스터디 단톡방</a>
-      <a href="#">조제전당 블로그</a>
-      <a href="https://kmong.com/@조제전당" target="_blank" rel="noopener">크몽 결제 ↗</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 조제전당 (Jojejeondang). All Rights Reserved.</span>
-    <span>Made for D-40 Pass · Efficiency 100</span>
+  <div class="wrap foot-base">
+    <span>© <span data-year>2026</span> 조제전당 — JOJEJEONDANG. All rights reserved.</span>
+    <span>Built with care for D−40 candidates.</span>
   </div>
 </footer>
-
-<!-- 플로팅 CTA -->
-<div class="float-cta">
-  <a href="#" class="float-btn kakao" aria-label="카카오톡 문의">
-    <svg viewBox="0 0 24 24" width="26" height="26" fill="#381E1F"><path d="M12 3C6.5 3 2 6.5 2 11c0 2.9 1.9 5.4 4.7 6.9L5.5 22l4.3-2.4c.7.1 1.4.2 2.2.2 5.5 0 10-3.5 10-8s-4.5-8-10-8z"/></svg>
-    <span class="label">1:1 카톡 문의</span>
-  </a>
-  <a href="#pricing" class="float-btn buy" aria-label="구매하기">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D4A24C" stroke-width="1.8" stroke-linecap="round"><path d="M5 7h14l-1.5 12h-11z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
-    <span class="label">패키지 구매</span>
-  </a>
-</div>
 
 <script src="main.js"></script>
 </body>
