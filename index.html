@@ -2393,54 +2393,97 @@ footer {
     <div class="section-eyebrow">
       <span class="num">04</span>
       <span class="line"></span>
-      <span>About the Author</span>
+      <span>About Jojejeondang</span>
     </div>
-    <h2 class="section-title">자료를 만든 사람,<br><em>지민</em></h2>
+    <h2 class="section-title">자료를 만든 곳,<br><em>조제전당</em></h2>
 
     <div class="author-grid">
-      <!-- 좌측: 포트레이트 + 이름 -->
+      <!-- 좌측: 브랜드 시그니처 카드 -->
       <div>
         <div class="author-portrait">
-          <!-- 포트레이트 자리 (실제 사진은 추후 교체) -->
           <svg viewBox="0 0 380 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="portraitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <linearGradient id="brandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stop-color="#2D3D6B"/>
                 <stop offset="100%" stop-color="#0F1A36"/>
               </linearGradient>
-              <pattern id="portraitDots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="10" cy="10" r="0.8" fill="#D4A24C" opacity="0.3"/>
+              <pattern id="brandDots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="10" cy="10" r="0.7" fill="#D4A24C" opacity="0.28"/>
               </pattern>
+              <radialGradient id="brandCenterGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#D4A24C" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#D4A24C" stop-opacity="0"/>
+              </radialGradient>
             </defs>
-            <rect width="380" height="500" fill="url(#portraitGrad)"/>
-            <rect width="380" height="500" fill="url(#portraitDots)"/>
-            <!-- 추상 인물 실루엣 -->
-            <ellipse cx="190" cy="195" rx="62" ry="78" fill="#D4A24C" opacity="0.18"/>
-            <ellipse cx="190" cy="195" rx="55" ry="70" fill="none" stroke="#D4A24C" stroke-width="0.5" opacity="0.6"/>
-            <path d="M 100 380 Q 100 320 140 300 Q 190 280 240 300 Q 280 320 280 380 L 280 500 L 100 500 Z" fill="#D4A24C" opacity="0.18"/>
-            <path d="M 100 380 Q 100 320 140 300 Q 190 280 240 300 Q 280 320 280 380" fill="none" stroke="#D4A24C" stroke-width="0.5" opacity="0.6"/>
-            <!-- 이니셜 -->
-            <text x="190" y="205" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="48" fill="#D4A24C" font-weight="500">JM</text>
+
+            <!-- 배경 -->
+            <rect width="380" height="500" fill="url(#brandGrad)"/>
+            <rect width="380" height="500" fill="url(#brandDots)"/>
+            <ellipse cx="190" cy="250" rx="160" ry="200" fill="url(#brandCenterGlow)"/>
+
             <!-- 코너 장식 -->
-            <line x1="20" y1="20" x2="60" y2="20" stroke="#D4A24C" stroke-width="0.6"/>
-            <line x1="20" y1="20" x2="20" y2="60" stroke="#D4A24C" stroke-width="0.6"/>
-            <line x1="320" y1="480" x2="360" y2="480" stroke="#D4A24C" stroke-width="0.6"/>
-            <line x1="360" y1="440" x2="360" y2="480" stroke="#D4A24C" stroke-width="0.6"/>
-            <text x="190" y="460" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#D4A24C" letter-spacing="3" opacity="0.7">PORTRAIT</text>
+            <line x1="20" y1="20" x2="52" y2="20" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="20" y1="20" x2="20" y2="52" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="328" y1="20" x2="360" y2="20" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="360" y1="20" x2="360" y2="52" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="20" y1="448" x2="20" y2="480" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="20" y1="480" x2="52" y2="480" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="360" y1="448" x2="360" y2="480" stroke="#D4A24C" stroke-width="0.6"/>
+            <line x1="328" y1="480" x2="360" y2="480" stroke="#D4A24C" stroke-width="0.6"/>
+
+            <!-- 상단 영문 -->
+            <text x="190" y="62" text-anchor="middle"
+              font-family="Cormorant Garamond" font-style="italic"
+              font-size="13" fill="#D4A24C" letter-spacing="4">JOJEJEONDANG</text>
+            <line x1="158" y1="74" x2="222" y2="74" stroke="#D4A24C" stroke-width="0.5"/>
+            <text x="190" y="92" text-anchor="middle"
+              font-family="Cormorant Garamond" font-style="italic"
+              font-size="10" fill="#D4A24C" opacity="0.7" letter-spacing="3">PASS COLLECTION</text>
+
+            <!-- 중앙 마크 (원형) -->
+            <circle cx="190" cy="180" r="50" fill="none" stroke="#D4A24C" stroke-width="0.8"/>
+            <circle cx="190" cy="180" r="44" fill="none" stroke="#D4A24C" stroke-width="0.3"/>
+            <circle cx="190" cy="180" r="38" fill="#0F1A36"/>
+            <text x="190" y="195" text-anchor="middle"
+              font-family="Gowun Batang" font-size="36" fill="#D4A24C" font-weight="400">조</text>
+
+            <!-- 한글 브랜드명 -->
+            <text x="190" y="278" text-anchor="middle"
+              font-family="Gowun Batang" font-size="30" fill="#D4A24C" letter-spacing="6">조제전당</text>
+
+            <!-- 슬로건 -->
+            <text x="190" y="316" text-anchor="middle"
+              font-family="Pretendard" font-size="11" fill="#D4A24C" opacity="0.85" letter-spacing="2">맞춤형화장품조제관리사</text>
+            <text x="190" y="334" text-anchor="middle"
+              font-family="Pretendard" font-size="11" fill="#D4A24C" opacity="0.85" letter-spacing="2">원패스 합격연구소</text>
+
+            <!-- 별 장식 -->
+            <text x="190" y="376" text-anchor="middle"
+              font-family="Cormorant Garamond" font-size="14" fill="#D4A24C" opacity="0.6">✦</text>
+
+            <!-- 하단 -->
+            <line x1="130" y1="408" x2="250" y2="408" stroke="#D4A24C" stroke-width="0.5"/>
+            <text x="190" y="436" text-anchor="middle"
+              font-family="Cormorant Garamond" font-style="italic"
+              font-size="15" fill="#D4A24C" letter-spacing="3">EFFICIENCY 100</text>
+            <text x="190" y="456" text-anchor="middle"
+              font-family="Cormorant Garamond" font-style="italic"
+              font-size="9" fill="#D4A24C" opacity="0.55" letter-spacing="3">D-40 PASS · 70+ VERIFIED</text>
           </svg>
         </div>
         <div class="author-meta">
-          <div class="name-en">Ji Min · 지민</div>
-          <h3>지민</h3>
-          <div class="role">맞춤형화장품조제관리사 8회 합격자<br>메가스터디뷰티아카데미 강사</div>
+          <div class="name-en">Jojejeondang</div>
+          <h3>조제전당</h3>
+          <div class="role">맞춤형화장품조제관리사 원패스 합격연구소<br>EFFICIENCY 100</div>
         </div>
       </div>
 
       <!-- 우측: 인용구 + CV -->
       <div>
         <div class="author-quote">
-          시험에 나올 것만 골라보는 것 — 그게 합격률 14.1% 시험을 D-40 안에 통과하는 유일한 답이라는 걸,<br>
-          제가 직접 시험장에서 깨달았어요.
+          교재를 끝까지 보는 것이 아니라,<br>
+          시험에 나올 것만 골라보는 것 —<br>
+          D-40 안에 합격하는 <em>유일한 방법</em>입니다.
         </div>
 
         <!-- 경력 -->
@@ -2452,15 +2495,19 @@ footer {
           <ul class="cv-list">
             <li>
               <span class="year">현재</span>
-              <span class="desc">메가스터디뷰티아카데미 강사<small>맞춤형화장품조제관리사 자격증 강의 진행</small></span>
+              <span class="desc">메가스터디뷰티아카데미 수원캠퍼스 강사<small>맞춤형화장품조제관리사 자격증 강의</small></span>
             </li>
             <li>
-              <span class="year">현재</span>
-              <span class="desc">'조제전당' 블로그 운영<small>맞춤형화장품조제관리사 원패스 합격연구소</small></span>
+              <span class="year">전</span>
+              <span class="desc">메가스터디뷰티아카데미 강남캠퍼스 강사<small>맞춤형화장품조제관리사 자격증 강의</small></span>
             </li>
             <li>
               <span class="year">현재</span>
               <span class="desc">〈효율100〉 풀세트 자료 집필 · 운영<small>누적 70명 이상 수강생 합격 검증</small></span>
+            </li>
+            <li>
+              <span class="year">현재</span>
+              <span class="desc">'조제전당' 블로그 운영<small>맞춤형화장품조제관리사 원패스 합격연구소</small></span>
             </li>
           </ul>
         </div>
@@ -2473,12 +2520,8 @@ footer {
           </div>
           <ul class="cv-list">
             <li>
-              <span class="year">전공</span>
-              <span class="desc">메이크업 전공<small>화장품·뷰티 분야 전공자로서의 전문성</small></span>
-            </li>
-            <li>
-              <span class="year">—</span>
-              <span class="desc placeholder">학력 사항 추가 예정</span>
+              <span class="year">재학</span>
+              <span class="desc">서경대학교 메이크업디자인학과<small>화장품·뷰티 분야 전공자로서의 전문성</small></span>
             </li>
           </ul>
         </div>
@@ -2491,12 +2534,24 @@ footer {
           </div>
           <ul class="cv-list">
             <li>
-              <span class="year">8회</span>
-              <span class="desc">맞춤형화장품조제관리사 (원패스 합격)<small>식약처·대한상공회의소 시행 · 합격률 14.1%</small></span>
+              <span class="year">2024.11</span>
+              <span class="desc">맞춤형화장품조제관리사<small>대한상공회의소 · 제 8회 시험 원패스 합격</small></span>
             </li>
             <li>
-              <span class="year">—</span>
-              <span class="desc placeholder">기타 자격증 추가 예정</span>
+              <span class="year">2024.05</span>
+              <span class="desc">GTQ 그래픽기술자격 1급<small>한국생산성본부</small></span>
+            </li>
+            <li>
+              <span class="year">2024.05</span>
+              <span class="desc">업스타일디렉터 3급<small>한국메이크업전문가직업교류협회</small></span>
+            </li>
+            <li>
+              <span class="year">2024.05</span>
+              <span class="desc">방송분장사 3급<small>사단법인 한국분장예술인협회</small></span>
+            </li>
+            <li>
+              <span class="year">2022.04</span>
+              <span class="desc">미용사(메이크업)<small>한국산업인력공단</small></span>
             </li>
           </ul>
         </div>
@@ -2509,8 +2564,8 @@ footer {
           </div>
           <ul class="cv-list">
             <li>
-              <span class="year">—</span>
-              <span class="desc placeholder">수상 내역 추가 예정</span>
+              <span class="year">2023.05</span>
+              <span class="desc">아트마스크 부문 금상<small>제9회 아시아미페스티벌 뷰티콘테스트 · 한국메이크업전문가직업교류협회</small></span>
             </li>
           </ul>
         </div>
