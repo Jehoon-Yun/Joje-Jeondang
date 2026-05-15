@@ -47,25 +47,34 @@
   .summary .sub{font-size:12px;color:var(--mocha-600);margin-top:6px}
 
   /* ===== PASS-RATE TABLE ===== */
-  .ptbl-wrap{border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900);overflow-x:auto}
-  table.ptbl{width:100%;border-collapse:collapse;min-width:680px}
-  table.ptbl th,table.ptbl td{padding:14px 14px;text-align:left;font-size:14px;line-height:1.6;color:var(--ink-800);border-bottom:1px solid var(--tan-300);vertical-align:middle}
-  @media(min-width:768px){table.ptbl th,table.ptbl td{padding:18px 20px;font-size:15px}}
-  table.ptbl thead th{background:var(--paper-50);font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:13px;letter-spacing:0.04em;border-bottom:1px solid var(--ink-900);position:sticky;top:0}
+  .ptbl-wrap{border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900)}
+  @media(min-width:768px){.ptbl-wrap{overflow-x:auto}}
+  table.ptbl{width:100%;border-collapse:collapse}
+  @media(min-width:768px){table.ptbl{min-width:680px}}
+  table.ptbl th,table.ptbl td{padding:10px 8px;text-align:left;font-size:12.5px;line-height:1.55;color:var(--ink-800);border-bottom:1px solid var(--tan-300);vertical-align:middle}
+  @media(min-width:768px){table.ptbl th,table.ptbl td{padding:18px 20px;font-size:15px;line-height:1.6}}
+  table.ptbl thead th{background:var(--paper-50);font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:11px;letter-spacing:0.04em;border-bottom:1px solid var(--ink-900);position:sticky;top:0}
+  @media(min-width:768px){table.ptbl thead th{font-size:13px}}
   table.ptbl tbody tr:last-child td{border-bottom:none}
   table.ptbl tbody tr:hover{background:var(--paper-50)}
-  table.ptbl .ses{font-family:var(--f-display);font-weight:700;color:var(--ink-900)}
+  table.ptbl .ses{font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:13px}
+  @media(min-width:768px){table.ptbl .ses{font-size:15px}}
   table.ptbl .num{font-family:var(--f-italic);font-variant-numeric:tabular-nums;color:var(--ink-700)}
-  table.ptbl td.rate{font-family:var(--f-italic);font-size:18px;font-weight:500;color:var(--ink-900);font-variant-numeric:tabular-nums;letter-spacing:-0.01em;width:120px}
+  table.ptbl td.rate{font-family:var(--f-italic);font-size:15px;font-weight:500;color:var(--ink-900);font-variant-numeric:tabular-nums;letter-spacing:-0.01em;width:auto}
+  @media(min-width:768px){table.ptbl td.rate{font-size:18px;width:120px}}
   table.ptbl tr.lo td.rate{color:var(--brick)}
   table.ptbl tr.hi td.rate{color:var(--sage)}
-  table.ptbl tr.our{background:var(--cream-200)}
-  table.ptbl tr.our:hover{background:#E0D6C2}
-  table.ptbl tr.our td{color:var(--ink-900)}
-  table.ptbl tr.our .ses::after{content:'OUR';display:inline-block;margin-left:8px;background:var(--ink-900);color:var(--tan-400);font-family:var(--f-italic);font-size:9px;letter-spacing:0.24em;padding:2px 6px;font-weight:500}
   table.ptbl tr.up td{color:var(--mocha-600);font-style:italic}
   table.ptbl tr.up td.rate{color:var(--mocha-500);font-style:normal}
-  table.ptbl .note{color:var(--mocha-600);font-size:12.5px;font-family:var(--f-body)}
+  table.ptbl .note{color:var(--mocha-600);font-size:11px;font-family:var(--f-body)}
+  @media(min-width:768px){table.ptbl .note{font-size:12.5px}}
+  /* 모바일: 응시자(3)·합격자(4) 컬럼과 합격률 시각화 바 숨김 → 한 화면에 표시 */
+  @media(max-width:767px){
+    table.ptbl th:nth-child(3),table.ptbl td:nth-child(3),
+    table.ptbl th:nth-child(4),table.ptbl td:nth-child(4){display:none}
+    table.ptbl .barwrap{display:none}
+    table.ptbl .barcell{gap:0}
+  }
 
   /* visual rate bar inline */
   .barcell{display:flex;align-items:center;gap:10px}
@@ -240,7 +249,7 @@
           <tr><td class="ses">5회</td><td class="num">2022.03.05</td><td class="num">2,448</td><td class="num">577</td><td class="rate"><div class="barcell"><span>23.5%</span><span class="barwrap"><span class="barfill" style="width:57%"></span></span></div></td><td class="note">—</td></tr>
           <tr><td class="ses">6회</td><td class="num">2022.09.03</td><td class="num">2,316</td><td class="num">579</td><td class="rate"><div class="barcell"><span>25.0%</span><span class="barwrap"><span class="barfill" style="width:60%"></span></span></div></td><td class="note">—</td></tr>
           <tr><td class="ses">7회</td><td class="num">2023.06.03</td><td class="num">2,484</td><td class="num">554</td><td class="rate"><div class="barcell"><span>22.3%</span><span class="barwrap"><span class="barfill" style="width:54%"></span></span></div></td><td class="note">—</td></tr>
-          <tr class="our"><td class="ses">8회</td><td class="num">2024.10.19</td><td class="num">2,360</td><td class="num">615</td><td class="rate"><div class="barcell"><span>26.1%</span><span class="barwrap"><span class="barfill" style="width:63%"></span></span></div></td><td class="note">조제전당 운영자 합격 회차</td></tr>
+          <tr><td class="ses">8회</td><td class="num">2024.10.19</td><td class="num">2,360</td><td class="num">615</td><td class="rate"><div class="barcell"><span>26.1%</span><span class="barwrap"><span class="barfill" style="width:63%"></span></span></div></td><td class="note">—</td></tr>
           <tr><td class="ses">9회</td><td class="num">2025.05.24</td><td class="num">1,566</td><td class="num">210</td><td class="rate"><div class="barcell"><span>13.4%</span><span class="barwrap"><span class="barfill" style="width:32%"></span></span></div></td><td class="note">—</td></tr>
           <tr><td class="ses">10회</td><td class="num">2025.09.20</td><td class="num">1,957</td><td class="num">489</td><td class="rate"><div class="barcell"><span>25.0%</span><span class="barwrap"><span class="barfill" style="width:60%"></span></span></div></td><td class="note">—</td></tr>
           <tr class="up"><td class="ses">11회</td><td class="num">2026.05.23</td><td class="num">예정</td><td class="num">예정</td><td class="rate">예정</td><td class="note">원서접수 04.30 ~ 05.06</td></tr>
@@ -252,7 +261,6 @@
     <div class="ptbl-foot reveal">
       <div class="legend">
         <span class="lg lo">최저 회차</span>
-        <span class="lg our">운영자 합격 회차</span>
         <span class="lg">정기 회차</span>
         <span class="lg up">예정 회차</span>
       </div>
@@ -325,8 +333,8 @@
         <div class="gauge"><i style="width:62%"></i></div>
         <p class="desc">유통 단계 안전관리, 위해평가, 회수 절차 — 사례 중심의 응용 문항이 많은 과목.</p>
       </div>
-      <div class="sub weight-hi">
-        <div class="sn">— Subject 04 / Largest</div>
+      <div class="sub">
+        <div class="sn">— Subject 04</div>
         <h3>맞춤형화장품의<br>이해</h3>
         <div class="ratio"><span class="pct">40%</span><span class="lbl">Weight</span></div>
         <div class="gauge"><i style="width:100%"></i></div>
