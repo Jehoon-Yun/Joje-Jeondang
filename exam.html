@@ -17,10 +17,42 @@
   @media(min-width:1024px){.exam-hero{padding:80px 0 48px}}
   .exam-hero .meta{display:flex;align-items:center;gap:14px;font-family:var(--f-italic);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:22px}
   .exam-hero .meta::before{content:'';width:32px;height:1px;background:var(--tan-400)}
+  .exam-hero .tag-national{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-bottom:18px;padding:7px 16px;
+    background:var(--cream-200);border:1px solid var(--tan-300);
+    font-family:var(--f-body);font-size:13px;font-weight:500;letter-spacing:0.02em;
+    color:var(--mocha-700);
+  }
+  .exam-hero .tag-national::before{content:'';width:6px;height:6px;background:var(--brick);border-radius:50%;display:inline-block}
+  .exam-hero .tag-national b{color:var(--ink-900);font-weight:700}
   .exam-hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(32px,6vw,56px);line-height:1.2;letter-spacing:-0.018em;color:var(--ink-900);text-wrap:pretty}
   .exam-hero h1 em{color:var(--mocha-500);font-weight:500}
   .exam-hero p{margin-top:22px;font-size:clamp(15px,2vw,18px);line-height:1.8;color:var(--ink-700);max-width:680px}
   .exam-hero .source{margin-top:18px;font-size:12px;letter-spacing:0.16em;color:var(--mocha-600);text-transform:uppercase;font-family:var(--f-italic)}
+
+  /* ===== ROLE CARD (맞춤형화장품 조제관리사란?) ===== */
+  .role-card{
+    background:var(--paper-0);border:1px solid var(--tan-300);
+    padding:28px 24px;display:grid;gap:16px;
+    border-left:3px solid var(--ink-900);
+  }
+  @media(min-width:768px){.role-card{grid-template-columns:220px 1fr;gap:40px;padding:36px 40px;align-items:start}}
+  .role-card .role-ey{
+    font-family:var(--f-italic);font-size:11.5px;letter-spacing:0.26em;
+    color:var(--mocha-500);text-transform:uppercase;
+    display:flex;align-items:center;gap:10px;
+  }
+  .role-card .role-ey::before{content:'';width:20px;height:1px;background:var(--tan-400)}
+  .role-card h3{
+    font-family:var(--f-display);font-weight:400;
+    font-size:clamp(20px,2.6vw,26px);line-height:1.35;color:var(--ink-900);
+    margin-top:8px;letter-spacing:-0.01em;text-wrap:pretty;
+  }
+  .role-card h3 em{font-family:var(--f-italic);color:var(--mocha-500);font-weight:500}
+  .role-card .role-body p{font-size:14.5px;line-height:1.85;color:var(--ink-700);margin:0}
+  .role-card .role-body p + p{margin-top:12px}
+  .role-card .role-body b{color:var(--ink-900);font-weight:600}
 
   section.block{padding:64px 0}
   @media(min-width:1024px){section.block{padding:104px 0}}
@@ -203,9 +235,26 @@
 <section class="exam-hero">
   <div class="wrap reveal">
     <div class="meta">— Exam Information / Pass Rate</div>
+    <div class="tag-national">화장품 분야 <b>유일</b>의 국가자격시험</div>
     <h1>1~10회 누적 합격률<br><em>20.0%</em>의 시험.</h1>
     <p>맞춤형화장품조제관리사 시험은 매 회차 합격률이 크게 흔들립니다. 가장 낮을 때 7.2%, 직전 9회도 13.4%까지 떨어진 적이 있는 시험입니다. 회차별 데이터, 다음 시험 일정, 4과목 출제 비중까지 — 시험 준비에 필요한 사실만 모았습니다.</p>
     <div class="source">— Source · 식약처 · 대한상공회의소 공개자료</div>
+  </div>
+</section>
+
+<!-- ====================== ROLE CARD (조제관리사란?) ====================== -->
+<section style="padding:8px 0 32px">
+  <div class="wrap reveal">
+    <div class="role-card">
+      <div>
+        <div class="role-ey">What is 조제관리사</div>
+        <h3>맞춤형화장품 <em>조제관리사</em>란?</h3>
+      </div>
+      <div class="role-body">
+        <p>맞춤형화장품판매업소에서 <b>화장품 원료의 혼합·소분 업무</b> 등 맞춤형화장품의 품질과 안전 관리 역할을 전문적으로 담당하는 직업입니다.</p>
+        <p>한 번 취득하면 <b>평생 유효</b>한 자격으로, 별도 갱신이 필요 없습니다. 식약처가 <b>2020년 3월 전 세계 최초</b>로 시행한 맞춤형화장품 제도의 핵심 인력입니다.</p>
+      </div>
+    </div>
   </div>
 </section>
 
