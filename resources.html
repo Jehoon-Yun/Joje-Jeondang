@@ -65,6 +65,27 @@
   .pdf-actions{padding:18px 28px;background:var(--paper-50);display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--tan-300)}
   .pdf-actions .btn{flex:1;justify-content:center}
 
+  /* ===== PREVIEW DOWNLOAD CARDS (효율100 체험판 — 3열 그리드 + 표지 한 장) ===== */
+  .pdfs-3{display:grid;gap:24px;grid-template-columns:1fr}
+  @media(min-width:640px){.pdfs-3{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.pdfs-3{grid-template-columns:repeat(3,1fr);gap:28px}}
+  .pdf-preview.single{
+    grid-template-columns:1fr;
+    padding:32px 28px 0;
+    display:flex;justify-content:center;
+  }
+  .pdf-preview.single img{
+    max-width:180px;width:100%;aspect-ratio:3/4;
+  }
+  @media(min-width:1024px){.pdf-preview.single img{max-width:200px}}
+  .pdf .free-tag{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:3px 10px;font-family:var(--f-italic);font-size:10.5px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--brick);border:1px solid var(--brick);
+    margin-top:10px;
+  }
+
   /* ===== REVIEW CARDS ===== */
   .reviews{display:grid;gap:18px}
   @media(min-width:768px){.reviews{grid-template-columns:repeat(2,1fr);gap:22px}}
@@ -242,6 +263,79 @@
         <div class="pdf-actions">
           <a class="btn btn-primary" href="exam_sample_2.pdf" download>PDF 다운로드 <span class="ar">↓</span></a>
           <a class="btn btn-secondary" href="exam_sample_2.pdf" target="_blank" rel="noopener">새 창에서 열기</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 효율100 체험판 ====================== -->
+<section class="block">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="ey">— Efficiency 100 · Free Preview</span>
+      <h2 class="h1" style="margin-top:8px">효율100 <em>체험판</em>.</h2>
+      <p class="body" style="margin-top:14px;color:var(--ink-700);max-width:680px">구매 전 자료의 구성과 톤을 직접 확인하실 수 있도록, <b style="color:var(--ink-900)">이론교재·필기노트·암기테스트 일부</b>를 무료로 공개합니다. 회원가입·로그인 없이 바로 다운로드.</p>
+    </header>
+
+    <div class="pdfs-3 reveal">
+      <article class="pdf">
+        <div class="pdf-preview single">
+          <img src="images/covers/cover_theory.jpg" alt="효율100 이론교재 체험판 표지">
+        </div>
+        <div class="pdf-body">
+          <div class="vn">— Volume 01 · Theory</div>
+          <h3>이론교재 체험판</h3>
+          <p class="desc">175페이지 압축 이론서 중 1과목 '화장품법의 이해' 일부를 공개합니다. 시중 교재와 어떻게 다른지, 정리 방식이 본인 학습 스타일에 맞는지 확인해보세요.</p>
+          <span class="free-tag">Free · 무료</span>
+        </div>
+        <div class="pdf-meta">
+          <div class="m"><span class="l">— Volume</span><span class="v">01</span></div>
+          <div class="m"><span class="l">— Format</span><span class="v">PDF</span></div>
+          <div class="m"><span class="l">— Edition</span><span class="v">체험판</span></div>
+        </div>
+        <div class="pdf-actions">
+          <a class="btn btn-primary" href="preview_theory.pdf" download>체험판 다운로드 <span class="ar">↓</span></a>
+        </div>
+      </article>
+
+      <article class="pdf">
+        <div class="pdf-preview single">
+          <img src="images/covers/cover_note.jpg" alt="효율100 필기노트 체험판 표지">
+        </div>
+        <div class="pdf-body">
+          <div class="vn">— Volume 02 · Note</div>
+          <h3>필기노트 체험판</h3>
+          <p class="desc">시험 직전 1주 회독용 36p 압축 노트의 일부. 핵심 키워드를 어떻게 정리했는지, 손에 들고 가서 마지막에 어떤 형태로 쓰게 될지 미리 확인하세요.</p>
+          <span class="free-tag">Free · 무료</span>
+        </div>
+        <div class="pdf-meta">
+          <div class="m"><span class="l">— Volume</span><span class="v">02</span></div>
+          <div class="m"><span class="l">— Format</span><span class="v">PDF</span></div>
+          <div class="m"><span class="l">— Edition</span><span class="v">체험판</span></div>
+        </div>
+        <div class="pdf-actions">
+          <a class="btn btn-primary" href="preview_note.pdf" download>체험판 다운로드 <span class="ar">↓</span></a>
+        </div>
+      </article>
+
+      <article class="pdf">
+        <div class="pdf-preview single">
+          <img src="images/covers/cover_test.jpg" alt="효율100 암기테스트 체험판 표지">
+        </div>
+        <div class="pdf-body">
+          <div class="vn">— Volume 03 · Test</div>
+          <h3>암기테스트 체험판</h3>
+          <p class="desc">2과목 화장품 제조 및 품질관리 단답형 빈칸 채우기 일부. 본인 암기 수준이 어디까지 와있는지 셀프 진단해볼 수 있는 자료.</p>
+          <span class="free-tag">Free · 무료</span>
+        </div>
+        <div class="pdf-meta">
+          <div class="m"><span class="l">— Volume</span><span class="v">03</span></div>
+          <div class="m"><span class="l">— Format</span><span class="v">PDF</span></div>
+          <div class="m"><span class="l">— Edition</span><span class="v">체험판</span></div>
+        </div>
+        <div class="pdf-actions">
+          <a class="btn btn-primary" href="preview_test.pdf" download>체험판 다운로드 <span class="ar">↓</span></a>
         </div>
       </article>
     </div>
