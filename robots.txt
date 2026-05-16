@@ -9,4 +9,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://jehoon-yun.github.io/Joje-Jeondang/sitemap.xml
+Sitemap: https://jojejeondang.com/sitemap.xml
