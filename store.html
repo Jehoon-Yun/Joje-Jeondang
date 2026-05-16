@@ -13,33 +13,46 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   /* ============ STORE HERO ============ */
-  .store-hero{padding:48px 0 24px}
+  .store-hero{padding:40px 0 24px}
+  @media(min-width:561px){.store-hero{padding:56px 0 32px}}
   @media(min-width:1024px){.store-hero{padding:80px 0 48px}}
-  .store-hero .meta{display:flex;align-items:center;gap:14px;font-family:var(--f-italic);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:22px}
+  .store-hero .meta{display:flex;align-items:center;gap:14px;font-family:var(--f-italic);font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:20px;flex-wrap:wrap}
+  @media(min-width:561px){.store-hero .meta{letter-spacing:0.28em;margin-bottom:22px}}
   .store-hero .meta::before{content:'';width:32px;height:1px;background:var(--tan-400)}
-  .store-hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(32px,6vw,56px);line-height:1.2;letter-spacing:-0.018em;color:var(--ink-900);text-wrap:pretty}
+  .store-hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,6.2vw,56px);line-height:1.2;letter-spacing:-0.018em;color:var(--ink-900);text-wrap:pretty}
   .store-hero h1 em{color:var(--mocha-500);font-weight:500}
-  .store-hero p{margin-top:22px;font-size:clamp(15px,2vw,18px);line-height:1.8;color:var(--ink-700);max-width:640px}
+  .store-hero p{margin-top:20px;font-size:clamp(16px,2vw,18px);line-height:1.8;color:var(--ink-700);max-width:640px}
+  @media(min-width:1024px){.store-hero p{margin-top:22px}}
 
-  /* ============ COMPARE TABLE ============ */
-  section.block{padding:64px 0}
+  /* ============ SECTION ============ */
+  section.block{padding:56px 0}
+  @media(min-width:561px){section.block{padding:72px 0}}
   @media(min-width:1024px){section.block{padding:104px 0}}
   .bg-elev{background:var(--paper-0)}
-  .sec-head{margin-bottom:36px}
+  .sec-head{margin-bottom:28px}
+  @media(min-width:561px){.sec-head{margin-bottom:36px}}
   @media(min-width:1024px){.sec-head{margin-bottom:48px}}
-  .sec-head .ey{display:inline-flex;align-items:center;gap:14px;font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:14px}
+  .sec-head .ey{display:inline-flex;align-items:center;gap:14px;font-family:var(--f-eyebrow);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--mocha-500);margin-bottom:14px}
+  @media(min-width:561px){.sec-head .ey{font-size:13px;letter-spacing:0.32em}}
   .sec-head .ey::before{content:'';width:24px;height:1px;background:var(--tan-400)}
 
+  /* ============ COMPARE TABLE ============ */
+  /* 모바일에서 라벨칸 좁아지지 않도록 1.2fr 1fr 1.1fr 비율, 셀 패딩·폰트 단계 조정 */
   .compare{border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900)}
-  .cmp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;border-bottom:1px solid var(--tan-300)}
+  .cmp-row{display:grid;grid-template-columns:1.2fr 1fr 1.1fr;gap:0;border-bottom:1px solid var(--tan-300)}
+  @media(min-width:561px){.cmp-row{grid-template-columns:1.4fr 1fr 1fr}}
   .cmp-row:last-child{border-bottom:none}
-  .cmp-row > *{padding:16px 14px;font-size:14px;line-height:1.7;color:var(--ink-700)}
-  @media(min-width:768px){.cmp-row > *{padding:20px 24px;font-size:15px}}
+  .cmp-row > *{padding:14px 10px;font-size:13px;line-height:1.65;color:var(--ink-700)}
+  @media(min-width:561px){.cmp-row > *{padding:18px 18px;font-size:14px;line-height:1.7}}
+  @media(min-width:1024px){.cmp-row > *{padding:20px 24px;font-size:15px}}
   .cmp-head{background:var(--paper-50);border-bottom:1px solid var(--ink-900) !important}
-  .cmp-head > *{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--ink-900);letter-spacing:0.02em;text-align:center}
+  .cmp-head > *{font-family:var(--f-display);font-weight:700;font-size:13px;color:var(--ink-900);letter-spacing:0.02em;text-align:center}
+  @media(min-width:561px){.cmp-head > *{font-size:14px}}
   .compare .cmp-head .ours{background:var(--ink-900);color:var(--paper-100);position:relative}
-  .compare .cmp-head .ours::after{content:'EFFICIENCY 100';font-family:var(--f-italic);font-size:9px;color:var(--tan-400);letter-spacing:0.28em;display:block;margin-top:2px;font-weight:400}
-  .cmp-row .lbl{font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:14px}
+  .compare .cmp-head .ours::after{content:'EFFICIENCY 100';font-family:var(--f-italic);font-size:9px;color:var(--tan-400);letter-spacing:0.24em;display:block;margin-top:3px;font-weight:400}
+  @media(min-width:561px){.compare .cmp-head .ours::after{font-size:10px;letter-spacing:0.28em}}
+  .cmp-row .lbl{font-family:var(--f-display);font-weight:700;color:var(--ink-900);font-size:13px}
+  @media(min-width:561px){.cmp-row .lbl{font-size:14px}}
   .cmp-row .ours{background:var(--cream-200)}
   .cmp-row .ours b{color:var(--ink-900);font-weight:700}
   .cmp-row .typ{color:var(--mocha-600)}
@@ -47,57 +60,83 @@
   .cmp-row .v{color:var(--sage);font-weight:600}
 
   /* ============ ITEM DETAIL CARD ============ */
-  .vol{padding:64px 0;border-top:1px solid var(--tan-300)}
+  /* 모바일 1열 / 768+ 1.2fr-이상 비율 / 1024+ 1fr 1.2fr */
+  .vol{padding:48px 0;border-top:1px solid var(--tan-300)}
   .vol:first-of-type{border-top:none;padding-top:0}
+  @media(min-width:561px){.vol{padding:64px 0}}
   @media(min-width:1024px){.vol{padding:96px 0}}
-  .vol-grid{display:grid;gap:32px;align-items:center}
-  @media(min-width:768px){.vol-grid{grid-template-columns:1fr 1.2fr;gap:56px}}
+  .vol-grid{display:grid;gap:28px;align-items:center}
+  @media(min-width:768px){.vol-grid{grid-template-columns:1fr 1.3fr;gap:40px}}
+  @media(min-width:1024px){.vol-grid{grid-template-columns:1fr 1.2fr;gap:56px}}
   .vol.alt .vol-grid{direction:rtl}
   .vol.alt .vol-grid > *{direction:ltr}
+  /* 모바일에서는 항상 표지 위 → 정보 아래 */
+  @media(max-width:767px){.vol.alt .vol-grid{direction:ltr}}
   .vol-cover{
     aspect-ratio:3/4;background:var(--paper-50);border:1px solid var(--tan-300);
-    overflow:hidden;position:relative;
+    overflow:hidden;position:relative;max-width:420px;width:100%;margin:0 auto;
   }
+  @media(min-width:768px){.vol-cover{max-width:none;margin:0}}
   .vol-cover img{width:100%;height:100%;object-fit:cover}
   .vol-cover .badge{
     position:absolute;top:14px;left:14px;background:var(--paper-0);padding:6px 12px;
     font-family:var(--f-italic);font-size:11px;letter-spacing:0.24em;color:var(--mocha-700);
     border:1px solid var(--tan-300);
   }
-  .vol-info .vnum{font-family:var(--f-italic);font-size:13px;letter-spacing:0.24em;text-transform:uppercase;color:var(--mocha-500)}
-  .vol-info h3{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.25;color:var(--ink-900);margin-top:10px;text-wrap:pretty;letter-spacing:-0.01em}
+  .vol-info .vnum{font-family:var(--f-italic);font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mocha-500)}
+  @media(min-width:561px){.vol-info .vnum{font-size:13px;letter-spacing:0.24em}}
+  .vol-info h3{font-family:var(--f-display);font-weight:400;font-size:clamp(24px,4vw,38px);line-height:1.25;color:var(--ink-900);margin-top:10px;text-wrap:pretty;letter-spacing:-0.01em}
   .vol-info h3 em{color:var(--mocha-500);font-weight:500}
-  .vol-info p.lead{font-size:16px;line-height:1.85;color:var(--ink-700);margin-top:18px;max-width:520px}
-  .feats{margin-top:24px;display:grid;gap:10px}
-  .feat{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--tan-300);align-items:baseline}
+  .vol-info p.lead{font-size:16px;line-height:1.85;color:var(--ink-700);margin-top:16px;max-width:520px}
+  @media(min-width:561px){.vol-info p.lead{margin-top:18px}}
+  .feats{margin-top:22px;display:grid;gap:8px}
+  @media(min-width:561px){.feats{margin-top:24px;gap:10px}}
+  .feat{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--tan-300);align-items:baseline}
+  @media(min-width:561px){.feat{gap:14px}}
   .feat:last-child{border-bottom:none}
-  .feat .num{font-family:var(--f-italic);font-size:12px;color:var(--mocha-500);letter-spacing:0.18em;width:38px}
-  .feat .t{font-size:14.5px;color:var(--ink-800);line-height:1.7}
+  .feat .num{font-family:var(--f-italic);font-size:12px;color:var(--mocha-500);letter-spacing:0.18em;width:36px}
+  .feat .t{font-size:14px;color:var(--ink-800);line-height:1.7}
+  @media(min-width:561px){.feat .t{font-size:15px}}
   .feat .t b{color:var(--ink-900);font-weight:600}
   .vol-meta{
     margin-top:24px;padding:16px 0;border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900);
-    display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+    display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
   }
-  .vol-meta .pages{font-family:var(--f-display);font-weight:700;font-size:18px;color:var(--ink-900)}
+  .vol-meta .pages{font-family:var(--f-display);font-weight:700;font-size:17px;color:var(--ink-900)}
+  @media(min-width:561px){.vol-meta .pages{font-size:18px}}
   .vol-meta .pages span{color:var(--mocha-500);font-weight:400;margin-left:6px}
   .vol-meta .price{font-family:var(--f-italic);font-size:22px;color:var(--brick);font-weight:500;letter-spacing:-0.01em}
   .vol-meta .price small{font-size:11px;color:var(--mocha-600);letter-spacing:0.12em;margin-left:8px;font-family:var(--f-body);font-weight:400}
+  .vol-meta .btn{flex:0 1 auto}
+  @media(max-width:560px){.vol-meta .btn{width:100%;justify-content:center}}
 
   /* ============ PACKAGE BANNER ============ */
+  /* 모바일 1열 stack / 1024+ 1.3fr 1fr */
   .pkg{
-    background:var(--ink-900);color:var(--paper-100);padding:56px 28px;
+    background:var(--ink-900);color:var(--paper-100);padding:40px 24px;
     margin-top:24px;display:grid;gap:32px;align-items:center;
   }
-  @media(min-width:768px){.pkg{padding:80px 56px;grid-template-columns:1.3fr 1fr;gap:56px}}
-  .pkg .ey{color:var(--tan-400);font-family:var(--f-eyebrow);font-size:13px;letter-spacing:0.32em;text-transform:uppercase;display:inline-flex;gap:14px;align-items:center}
+  @media(min-width:561px){.pkg{padding:56px 32px}}
+  @media(min-width:1024px){.pkg{padding:80px 56px;grid-template-columns:1.3fr 1fr;gap:56px}}
+  .pkg .ey{color:var(--tan-400);font-family:var(--f-eyebrow);font-size:12px;letter-spacing:0.28em;text-transform:uppercase;display:inline-flex;gap:14px;align-items:center}
+  @media(min-width:561px){.pkg .ey{font-size:13px;letter-spacing:0.32em}}
   .pkg .ey::before{content:'';width:28px;height:1px;background:var(--tan-400)}
-  .pkg h2{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,4.5vw,42px);line-height:1.25;color:var(--paper-100);margin-top:18px;text-wrap:pretty}
+  .pkg h2{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,4.4vw,42px);line-height:1.25;color:var(--paper-100);margin-top:16px;text-wrap:pretty}
+  @media(min-width:561px){.pkg h2{margin-top:18px}}
   .pkg h2 em{color:var(--tan-400);font-weight:500}
-  .pkg p{margin-top:16px;color:#D8CBB7;font-size:15px;line-height:1.85;max-width:520px}
-  .pkg-cta{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
-  .pkg-cta .btn{padding:12px 18px;font-size:14px;min-height:44px;letter-spacing:0.02em}
-  @media(min-width:768px){.pkg-cta{margin-top:28px;gap:12px}.pkg-cta .btn{padding:14px 24px;font-size:15px;min-height:48px}}
-  .pkg-stack{display:grid;gap:10px}
+  .pkg p{margin-top:14px;color:#D8CBB7;font-size:15px;line-height:1.85;max-width:520px}
+  @media(min-width:561px){.pkg p{margin-top:16px}}
+
+  /* CTA: 모바일 풀폭/세로 → 561+ inline */
+  .pkg-cta{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+  .pkg-cta .btn{width:100%;justify-content:center;padding:14px 20px;font-size:14px;min-height:48px;letter-spacing:0.02em}
+  @media(min-width:561px){
+    .pkg-cta{flex-direction:row;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .pkg-cta .btn{width:auto;padding:14px 24px;font-size:15px}
+  }
+
+  .pkg-stack{display:grid;gap:8px}
+  @media(min-width:561px){.pkg-stack{gap:10px}}
   .pkg-stack .li{display:grid;grid-template-columns:auto 1fr auto;gap:14px;padding:12px 0;border-bottom:1px solid rgba(216,203,183,0.2);align-items:baseline;font-size:14px;color:#D8CBB7}
   .pkg-stack .li:last-child{border-bottom:none}
   .pkg-stack .li .vn{font-family:var(--f-italic);font-size:11px;color:var(--tan-400);letter-spacing:0.2em}
@@ -118,14 +157,18 @@
   .faq-list{border-top:1px solid var(--ink-900)}
   .faq-item{border-bottom:1px solid var(--tan-300)}
   .faq-q{
-    width:100%;text-align:left;display:grid;grid-template-columns:auto 1fr auto;gap:18px;
-    padding:24px 4px 20px;align-items:baseline;cursor:pointer;
+    width:100%;text-align:left;display:grid;grid-template-columns:auto 1fr auto;gap:14px;
+    padding:20px 4px 16px;align-items:baseline;cursor:pointer;min-height:64px;
   }
+  @media(min-width:561px){.faq-q{gap:18px;padding:24px 4px 20px}}
   .faq-q:hover{background:var(--paper-50)}
-  .faq-q .num{font-family:var(--f-italic);font-size:13px;color:var(--mocha-500);letter-spacing:0.2em;width:42px}
-  .faq-q .q{font-family:var(--f-display);font-weight:400;font-size:17px;line-height:1.5;color:var(--ink-900);text-wrap:pretty}
+  .faq-q .num{font-family:var(--f-italic);font-size:12px;color:var(--mocha-500);letter-spacing:0.18em;width:36px}
+  @media(min-width:561px){.faq-q .num{font-size:13px;letter-spacing:0.2em;width:42px}}
+  .faq-q .q{font-family:var(--f-display);font-weight:400;font-size:16px;line-height:1.5;color:var(--ink-900);text-wrap:pretty}
+  @media(min-width:561px){.faq-q .q{font-size:17px}}
+  @media(min-width:1024px){.faq-q .q{font-size:18px}}
   .faq-q .ic{
-    width:24px;height:24px;border:1px solid var(--mocha-500);position:relative;
+    width:24px;height:24px;border:1px solid var(--mocha-500);position:relative;flex-shrink:0;
     transition:transform var(--t-base) var(--ease),background var(--t-base) var(--ease);
   }
   .faq-q .ic::before,.faq-q .ic::after{content:'';position:absolute;background:var(--mocha-500);left:50%;top:50%;transition:transform var(--t-base) var(--ease)}
@@ -135,9 +178,22 @@
   .faq-item.open .faq-q .ic::before,.faq-item.open .faq-q .ic::after{background:var(--paper-100)}
   .faq-item.open .faq-q .ic::after{transform:translate(-50%,-50%) rotate(90deg)}
   .faq-a{max-height:0;overflow:hidden;transition:max-height var(--t-base) var(--ease)}
-  .faq-a-inner{padding:14px 4px 34px 64px;font-size:15px;line-height:1.9;color:var(--ink-700)}
+  .faq-a-inner{padding:8px 4px 24px 4px;font-size:15px;line-height:1.85;color:var(--ink-700)}
+  @media(min-width:561px){.faq-a-inner{padding:12px 4px 30px 64px;line-height:1.9}}
+  @media(min-width:1024px){.faq-a-inner{padding:14px 4px 34px 64px}}
   .faq-a-inner b{color:var(--ink-900)}
-  @media(max-width:560px){.faq-a-inner{padding:12px 4px 28px 4px;line-height:1.85}.faq-q{padding:20px 4px 16px}.faq-q{gap:14px}}
+
+  /* FAQ contact card */
+  .faq-contact{
+    margin-top:32px;padding:20px 22px;background:var(--paper-0);border:1px solid var(--tan-300);
+    display:grid;grid-template-columns:1fr;gap:14px;align-items:start;
+  }
+  @media(min-width:561px){.faq-contact{padding:22px 26px;grid-template-columns:1fr auto;align-items:center;gap:18px}}
+  .faq-contact .l{font-family:var(--f-eyebrow);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--mocha-500)}
+  .faq-contact .t{font-family:var(--f-display);font-size:16px;color:var(--ink-900);margin-top:4px;line-height:1.5}
+  @media(min-width:561px){.faq-contact .t{font-size:17px}}
+  .faq-contact .btn{justify-content:center}
+  @media(max-width:560px){.faq-contact .btn{width:100%}}
 </style>
 </head>
 <body>
@@ -359,8 +415,8 @@
       </div>
     </div>
 
-    <div style="margin-top:36px;padding:20px 24px;background:var(--paper-0);border:1px solid var(--tan-300);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
-      <div><div class="cap" style="text-transform:uppercase;letter-spacing:0.18em;color:var(--mocha-500)">More questions</div><div style="font-family:var(--f-display);font-size:17px;color:var(--ink-900);margin-top:4px">카톡 1:1 문의로 바로 답변 받기</div></div>
+    <div class="faq-contact">
+      <div><div class="l">More questions</div><div class="t">카톡 1:1 문의로 바로 답변 받기</div></div>
       <a class="btn btn-secondary" href="https://open.kakao.com/o/sMmTDOIh" target="_blank" rel="noopener" data-todo="kakao-1on1">카톡으로 문의 <span class="ar">→</span></a>
     </div>
   </div>
