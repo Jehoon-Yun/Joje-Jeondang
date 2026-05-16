@@ -275,15 +275,25 @@ body.drawer-open{overflow:hidden}
 .foot-col a{color:#D8CBB7;font-size:13px;transition:color var(--t-fast) var(--ease);display:inline-block;padding:2px 0;min-height:32px}
 @media(min-width:1024px){.foot-col a{font-size:14px}}
 .foot-col a:hover{color:var(--paper-100)}
-/* foot-base는 grid가 아닌 column flex로 강제 — .site-footer .wrap의 grid를 확실히 덮어쓰기 */
+/* foot-base — 카피라이트 영역
+   · 모바일/태블릿(<1024px): column (위아래 배치) — 폭이 좁아 가로면 깨지므로
+   · PC(≥1024px): row (좌우 배치) — 원래 의도된 디자인 */
 .site-footer .wrap.foot-base{
   margin-top:32px;padding-top:20px;
   border-top:1px solid rgba(216,203,183,0.2);
-  display:flex;flex-direction:column;gap:4px;
-  font-size:10.5px;color:#A89D8C;letter-spacing:0;line-height:1.55;
+  display:flex;flex-direction:column;gap:6px;
+  font-size:12px;color:#A89D8C;letter-spacing:0;line-height:1.6;
 }
-@media(min-width:561px){.site-footer .wrap.foot-base{font-size:11px;letter-spacing:0.02em;gap:6px}}
-@media(min-width:1024px){.site-footer .wrap.foot-base{margin-top:48px;padding-top:24px;font-size:12px;letter-spacing:0.04em;gap:8px}}
+@media(min-width:561px){
+  .site-footer .wrap.foot-base{letter-spacing:0.02em;gap:8px}
+}
+@media(min-width:1024px){
+  .site-footer .wrap.foot-base{
+    margin-top:48px;padding-top:24px;
+    flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;
+    gap:16px;letter-spacing:0.04em;
+  }
+}
 
 /* =============================================================
    SCROLL-TRIGGER ANIMATION
