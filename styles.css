@@ -245,23 +245,24 @@ body.drawer-open{overflow:hidden}
   background:var(--ink-900);color:var(--paper-100);
   padding:40px 0 24px;margin-top:48px;
 }
-.site-footer .wrap{display:grid;gap:28px;grid-template-columns:1fr}
+/* 모바일: brand 전체 너비 + foot-col 4개를 2x2 그리드로 */
+.site-footer .wrap{display:grid;gap:28px 20px;grid-template-columns:1fr 1fr}
 .site-footer .foot-brand{grid-column:1 / -1}
 .site-footer .foot-brand svg{width:160px;height:auto;display:block}
 
-/* 561+ : 2열 */
+/* 561+ : 동일 2x2 유지 + 패딩만 키움 */
 @media(min-width:561px){
   .site-footer{padding:56px 0 32px;margin-top:72px}
-  .site-footer .wrap{grid-template-columns:1fr 1fr;gap:32px}
-  .site-footer .foot-brand{grid-column:1 / -1}
+  .site-footer .wrap{gap:32px 28px}
   .site-footer .foot-brand svg{width:180px}
 }
-/* 1024+ : 4열 (브랜드 1.4fr) */
+/* 1024+ : brand 위 전체 너비 + foot-col 4개를 한 줄로 */
 @media(min-width:1024px){
   .site-footer{padding:72px 0 40px;margin-top:96px}
-  .site-footer .wrap{grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
-  .site-footer .foot-brand{grid-column:auto}
+  .site-footer .wrap{grid-template-columns:repeat(4,1fr);gap:48px 40px}
+  .site-footer .foot-brand{grid-column:1 / -1}
   .site-footer .foot-brand svg{width:200px}
+  .site-footer .foot-brand p{max-width:520px}
 }
 
 .foot-brand .eyebrow{color:var(--tan-400)}
