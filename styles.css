@@ -275,18 +275,15 @@ body.drawer-open{overflow:hidden}
 .foot-col a{color:#D8CBB7;font-size:13px;transition:color var(--t-fast) var(--ease);display:inline-block;padding:2px 0;min-height:32px}
 @media(min-width:1024px){.foot-col a{font-size:14px}}
 .foot-col a:hover{color:var(--paper-100)}
-/* foot-base: 카피라이트 영역. 더 이상 .wrap 클래스를 쓰지 않고, wrap의 max-width/padding 역할을 자체 흡수.
-   .site-footer .wrap의 grid 규칙과 충돌하지 않도록 HTML에서 wrap 클래스를 분리함. */
-.foot-base{
-  max-width:var(--maxw);
-  margin:32px auto 0;
-  padding:20px var(--pad-x) 0;
+/* foot-base는 grid가 아닌 column flex로 강제 — .site-footer .wrap의 grid를 확실히 덮어쓰기 */
+.site-footer .wrap.foot-base{
+  margin-top:32px;padding-top:20px;
   border-top:1px solid rgba(216,203,183,0.2);
   display:flex;flex-direction:column;gap:4px;
   font-size:10.5px;color:#A89D8C;letter-spacing:0;line-height:1.55;
 }
-@media(min-width:561px){.foot-base{font-size:11px;letter-spacing:0.02em;gap:6px}}
-@media(min-width:1024px){.foot-base{margin-top:48px;padding-top:24px;font-size:12px;letter-spacing:0.04em;gap:8px}}
+@media(min-width:561px){.site-footer .wrap.foot-base{font-size:11px;letter-spacing:0.02em;gap:6px}}
+@media(min-width:1024px){.site-footer .wrap.foot-base{margin-top:48px;padding-top:24px;font-size:12px;letter-spacing:0.04em;gap:8px}}
 
 /* =============================================================
    SCROLL-TRIGGER ANIMATION
