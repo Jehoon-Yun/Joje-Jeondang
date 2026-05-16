@@ -56,6 +56,7 @@ body{
   color:var(--ink-900);
   font-size:16px;
   line-height:1.8;
+  letter-spacing:-0.012em;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   /* 한국어 줄바꿈: 어절(띄어쓰기) 단위로만 끊어 '됩니다'·'별도.' 같은 고아 글자 방지.
