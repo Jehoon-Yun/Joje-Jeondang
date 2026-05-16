@@ -2,13 +2,26 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F64037SRZX"></script>
+<!-- Google tag (gtag.js) — interaction-deferred -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-F64037SRZX');
+  (function(){
+    var done=false;
+    function loadGA(){
+      if(done)return; done=true;
+      var s=document.createElement('script');
+      s.async=true;
+      s.src='https://www.googletagmanager.com/gtag/js?id=G-F64037SRZX';
+      document.head.appendChild(s);
+    }
+    ['scroll','mousemove','touchstart','keydown','click','pointerdown'].forEach(function(e){
+      window.addEventListener(e,loadGA,{once:true,passive:true});
+    });
+    setTimeout(loadGA,3500);
+  })();
 </script>
 <meta name="google-site-verification" content="NAr3On89Ym2ysK4tKkze5yGOKYq5B1vSyVtVILd3RYI">
 <meta name="naver-site-verification" content="fcfbbf88fa3ef6b8a86120e49fa648577eeb4b23">
