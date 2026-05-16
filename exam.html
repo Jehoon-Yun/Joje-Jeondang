@@ -98,7 +98,11 @@
   @media(min-width:561px){.summary .lbl{letter-spacing:0.28em}}
   .summary .val{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink-900);margin-top:6px;line-height:1.1;letter-spacing:-0.01em}
   .summary .val sup{font-size:0.5em;color:var(--mocha-500);font-weight:400;margin-left:4px}
-  .summary .sub{font-size:11px;color:var(--mocha-500);margin-top:4px;letter-spacing:0.02em}
+  .summary .kpi-note{
+    border:none;padding:0;background:none;position:static;
+    font-size:11px;color:var(--mocha-500);margin-top:10px;letter-spacing:0.02em;line-height:1.4;
+  }
+  @media(min-width:561px){.summary .kpi-note{font-size:11.5px;margin-top:12px}}
 
   /* ===== PASS-RATE TABLE ===== */
   .ptbl-wrap{border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900)}
@@ -188,6 +192,13 @@
   }
   @media(min-width:561px){.sub{padding:28px 24px}}
   .sub:hover{transform:translateY(-4px);border-color:var(--ink-900)}
+  /* feature: 4과목 중 가장 큰 비중(맞춤형화장품의 이해) 강조 — 홈 'em' 강조와 동일한 mocha 톤 */
+  .sub.feature{border:1.5px solid var(--ink-900);background:var(--cream-200)}
+  .sub.feature .ratio{border-top-color:var(--mocha-500)}
+  .sub.feature .ratio .pct{color:var(--mocha-500);font-style:italic}
+  .sub.feature .gauge{background:rgba(140,107,74,0.18)}
+  .sub.feature .gauge i{background:var(--mocha-500)}
+  .sub.feature .form{border-top-color:var(--mocha-500)}
   .sub .sn{font-family:var(--f-italic);font-size:12px;color:var(--mocha-500);letter-spacing:0.22em;text-transform:uppercase}
   @media(min-width:561px){.sub .sn{font-size:13px;letter-spacing:0.24em}}
   .sub h3{font-family:var(--f-display);font-weight:700;font-size:17px;line-height:1.4;color:var(--ink-900);margin-top:10px;text-wrap:pretty}
@@ -300,7 +311,7 @@
     <div class="role-card">
       <div>
         <div class="role-ey">What is</div>
-        <h3>맞춤형화장품 <em>조제관리사</em>란?</h3>
+        <h3>맞춤형화장품조제관리사란?</h3>
       </div>
       <div class="role-body">
         <p>맞춤형화장품판매업소에서 <b>화장품 원료의 혼합·소분 업무</b> 등 맞춤형화장품의 품질과 안전 관리 역할을 전문적으로 담당하는 직업입니다.</p>
@@ -314,10 +325,10 @@
 <section style="padding:0 0 32px">
   <div class="wrap reveal">
     <div class="summary">
-      <div><div class="lbl">— 누적 응시</div><div class="val">37,391<sup>명</sup></div><div class="sub">1~10회 합산</div></div>
-      <div><div class="lbl">— 누적 합격</div><div class="val">7,496<sup>명</sup></div><div class="sub">1~10회 합산</div></div>
-      <div><div class="lbl">— 평균 합격률</div><div class="val">20.0<sup>%</sup></div><div class="sub">10개 회차 평균</div></div>
-      <div><div class="lbl">— 역대 최저</div><div class="val">7.2<sup>%</sup></div><div class="sub">3회 (2021.03)</div></div>
+      <div><div class="lbl">— 누적 응시</div><div class="val">37,391<sup>명</sup></div><div class="kpi-note">1~10회 합산</div></div>
+      <div><div class="lbl">— 누적 합격</div><div class="val">7,496<sup>명</sup></div><div class="kpi-note">1~10회 합산</div></div>
+      <div><div class="lbl">— 평균 합격률</div><div class="val">20.0<sup>%</sup></div><div class="kpi-note">10개 회차 평균</div></div>
+      <div><div class="lbl">— 역대 최저</div><div class="val">7.2<sup>%</sup></div><div class="kpi-note">3회 (2021.03)</div></div>
     </div>
   </div>
 </section>
@@ -439,7 +450,7 @@
         <div class="form"><span>선다 25</span><b>250점</b></div>
         <p class="desc">유통 단계 안전관리, 위해평가, 회수 절차 — 사례 중심의 응용 문항이 많은 과목.</p>
       </div>
-      <div class="sub">
+      <div class="sub feature">
         <div class="sn">— Subject 04</div>
         <h3>맞춤형화장품의<br>이해</h3>
         <div class="ratio"><span class="pct">40%</span><span class="lbl">Weight</span></div>
