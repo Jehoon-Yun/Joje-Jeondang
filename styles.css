@@ -247,10 +247,10 @@ body.drawer-open{overflow:hidden}
 .foot-base{
   margin-top:24px;padding-top:16px;
   border-top:1px solid rgba(216,203,183,0.2);
-  display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;
+  display:flex;flex-direction:column;gap:6px;
   font-size:11px;color:#A89D8C;letter-spacing:0.04em;
 }
-@media(min-width:768px){.foot-base{margin-top:48px;padding-top:24px;font-size:12px;gap:16px}}
+@media(min-width:768px){.foot-base{margin-top:48px;padding-top:24px;font-size:12px;gap:8px}}
 
 /* =============================================================
    SCROLL-TRIGGER ANIMATION
