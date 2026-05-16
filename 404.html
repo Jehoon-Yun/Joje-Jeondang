@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>페이지를 찾을 수 없습니다 — 조제전당</title>
+<meta name="description" content="요청하신 페이지를 찾을 수 없습니다. 조제전당 주요 페이지로 이동해 주세요.">
+<link rel="canonical" href="https://jojejeondang.com/404.html">
+<link rel="icon" href="https://jojejeondang.com/assets/logos/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper-0:#FFFEFA; --paper-100:#F4EFE6; --cream-200:#EAE3D4;
+    --tan-400:#C9A57C; --mocha-500:#8C6B4A; --mocha-600:#6E6353;
+    --ink-700:#4F4638; --ink-900:#2A1F18;
+    --f-display:'Gowun Batang',serif; --f-italic:'Fraunces',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    background:var(--paper-100); color:var(--ink-900);
+    font-family:var(--f-display);
+    word-break:keep-all; overflow-wrap:break-word;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    display:flex; align-items:center; justify-content:center;
+    padding:max(28px, env(safe-area-inset-left));
+  }
+  .wrap{ max-width:560px; width:100%; text-align:center }
+  .eyebrow{
+    font-family:var(--f-italic); font-style:italic; font-weight:500;
+    font-size:clamp(13px,2.6vw,15px); letter-spacing:.22em;
+    color:var(--mocha-500); text-transform:uppercase; margin-bottom:22px;
+  }
+  .code{
+    font-family:var(--f-italic); font-style:italic; font-weight:400;
+    font-size:clamp(64px,17vw,108px); line-height:1; color:var(--tan-400);
+    margin-bottom:18px;
+  }
+  h1{
+    font-weight:700; font-size:clamp(22px,5.4vw,30px);
+    line-height:1.5; margin-bottom:16px; color:var(--ink-900);
+  }
+  p{
+    font-weight:400; font-size:clamp(14px,3.4vw,16px);
+    line-height:1.95; color:var(--mocha-600); margin-bottom:38px;
+  }
+  .rule{
+    width:42px; height:1px; background:var(--tan-400);
+    margin:0 auto 34px;
+  }
+  nav{
+    display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
+  }
+  nav a{
+    display:inline-block; text-decoration:none;
+    font-family:var(--f-display); font-size:clamp(13px,3.2vw,15px);
+    color:var(--ink-900); border:1px solid var(--tan-400);
+    padding:13px 22px; transition:background .24s cubic-bezier(.2,.7,.2,1),color .24s;
+    white-space:nowrap;
+  }
+  nav a:hover,nav a:focus-visible{ background:var(--ink-900); color:var(--paper-0) }
+  nav a.primary{ background:var(--ink-900); color:var(--paper-0); border-color:var(--ink-900) }
+  nav a.primary:hover,nav a.primary:focus-visible{ background:var(--mocha-500); border-color:var(--mocha-500) }
+  @media (max-width:480px){
+    nav{flex-direction:column}
+    nav a{width:100%}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">404 &middot; Not Found</p>
+    <div class="code">404</div>
+    <h1>찾으시는 페이지가 없어요</h1>
+    <p>주소가 바뀌었거나 사라진 페이지일 수 있어요.<br>아래에서 필요한 곳으로 바로 가실 수 있습니다.</p>
+    <div class="rule" aria-hidden="true"></div>
+    <nav aria-label="주요 페이지로 이동">
+      <a class="primary" href="https://jojejeondang.com/">홈으로</a>
+      <a href="https://jojejeondang.com/exam.html">시험 정보</a>
+      <a href="https://jojejeondang.com/resources.html">자료실</a>
+      <a href="https://jojejeondang.com/store.html">교재 구매</a>
+    </nav>
+  </main>
+</body>
+</html>
