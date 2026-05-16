@@ -20,15 +20,20 @@
   @media(min-width:561px){.exam-hero .meta{letter-spacing:0.28em;margin-bottom:22px}}
   .exam-hero .meta::before{content:'';width:32px;height:1px;background:var(--tan-400)}
   .exam-hero .tag-national{
-    display:inline-flex;align-items:center;gap:10px;
-    margin-bottom:16px;padding:8px 16px;
-    background:var(--cream-200);border:1px solid var(--tan-300);
+    display:inline-flex;align-items:center;gap:12px;
+    margin-bottom:16px;padding:8px 18px 8px 14px;
+    background:var(--paper-0);border:1px solid var(--tan-300);
+    border-left:2px solid var(--brick);
     font-family:var(--f-body);font-size:13px;font-weight:500;letter-spacing:0.02em;
     color:var(--mocha-700);min-height:36px;
   }
-  @media(min-width:561px){.exam-hero .tag-national{margin-bottom:18px}}
-  .exam-hero .tag-national::before{content:'';width:6px;height:6px;background:var(--brick);border-radius:50%;display:inline-block}
-  .exam-hero .tag-national b{color:var(--ink-900);font-weight:700}
+  @media(min-width:561px){.exam-hero .tag-national{margin-bottom:18px;font-size:13.5px}}
+  .exam-hero .tag-national::before{content:'';width:5px;height:5px;background:var(--brick);border-radius:50%;display:inline-block;flex-shrink:0}
+  .exam-hero .tag-national b{
+    color:var(--brick);font-weight:600;
+    font-family:var(--f-italic);font-style:italic;
+    letter-spacing:0;font-size:15px;padding:0 2px;
+  }
   .exam-hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,6.2vw,56px);line-height:1.2;letter-spacing:-0.018em;color:var(--ink-900);text-wrap:pretty}
   .exam-hero h1 em{color:var(--mocha-500);font-weight:500}
   .exam-hero p{margin-top:20px;font-size:clamp(16px,2vw,18px);line-height:1.8;color:var(--ink-700);max-width:680px}
@@ -81,9 +86,9 @@
     border:1px solid var(--ink-900);background:var(--paper-0);
   }
   @media(min-width:561px){.summary{grid-template-columns:repeat(4,1fr)}}
-  .summary > div{padding:20px 18px;border-right:1px solid var(--tan-300);border-bottom:1px solid var(--tan-300)}
-  @media(min-width:561px){.summary > div{padding:24px 20px;border-bottom:none}}
-  @media(min-width:1024px){.summary > div{padding:28px 24px}}
+  .summary > div{padding:14px 14px;border-right:1px solid var(--tan-300);border-bottom:1px solid var(--tan-300)}
+  @media(min-width:561px){.summary > div{padding:18px 16px;border-bottom:none}}
+  @media(min-width:1024px){.summary > div{padding:22px 20px}}
   .summary > div:last-child{border-right:none}
   @media(max-width:560px){
     .summary > div:nth-child(2n){border-right:none}
@@ -91,9 +96,9 @@
   }
   .summary .lbl{font-family:var(--f-eyebrow);font-size:11px;letter-spacing:0.24em;color:var(--mocha-500);text-transform:uppercase}
   @media(min-width:561px){.summary .lbl{letter-spacing:0.28em}}
-  .summary .val{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink-900);margin-top:8px;line-height:1.1;letter-spacing:-0.01em}
+  .summary .val{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,3.4vw,32px);color:var(--ink-900);margin-top:6px;line-height:1.1;letter-spacing:-0.01em}
   .summary .val sup{font-size:0.5em;color:var(--mocha-500);font-weight:400;margin-left:4px}
-  .summary .sub{font-size:12px;color:var(--mocha-600);margin-top:6px}
+  .summary .sub{font-size:11px;color:var(--mocha-500);margin-top:4px;letter-spacing:0.02em}
 
   /* ===== PASS-RATE TABLE ===== */
   .ptbl-wrap{border-top:1px solid var(--ink-900);border-bottom:1px solid var(--ink-900)}
@@ -294,7 +299,7 @@
   <div class="wrap reveal">
     <div class="role-card">
       <div>
-        <div class="role-ey">What is 조제관리사</div>
+        <div class="role-ey">What is</div>
         <h3>맞춤형화장품 <em>조제관리사</em>란?</h3>
       </div>
       <div class="role-body">
