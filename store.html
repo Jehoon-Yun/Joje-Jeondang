@@ -31,7 +31,8 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Gowun+Batang:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <link rel="preload" as="font" type="font/woff2" href="fonts/Pretendard-400.subset.woff2" crossorigin>
-<link rel="stylesheet" href="fonts.css">
+<style>@font-face{font-family:'Pretendard';font-weight:400;font-style:normal;font-display:swap;src:local('Pretendard'),url('fonts/Pretendard-400.subset.woff2') format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-style:normal;font-display:swap;src:local('Pretendard SemiBold'),url('fonts/Pretendard-600.subset.woff2') format('woff2')}</style>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Gowun+Batang:wght@400;700&display=swap"></noscript>
 <style>
   /* ============ STORE HERO ============ */
@@ -250,6 +251,7 @@
   <a href="store.html"><span>교재 구매</span><span class="num">05</span></a>
   <a class="drawer-cta" href="#package">합격 풀세트 보기</a>
 </nav>
+<main id="main">
 
 <!-- ====================== HERO ====================== -->
 <section class="store-hero">
@@ -445,6 +447,7 @@
 </section>
 
 <!-- ====================== FOOTER ====================== -->
+</main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-brand">
@@ -462,9 +465,9 @@
       </svg>
       <p>맞춤형화장품조제관리사 합격연구소<br>8회 원패스 합격자가 만든 효율100 합격 풀세트</p>
     </div>
-    <div class="foot-col"><h4>탐색</h4><ul><li><a href="index.html">홈</a></li><li><a href="exam.html">시험 정보</a></li><li><a href="resources.html">자료실</a></li><li><a href="store.html">교재 구매</a></li></ul></div>
-    <div class="foot-col"><h4>구매·문의</h4><ul><li><a href="https://kmong.com/self-marketing/770274/e2ForXAvGu" target="_blank" rel="noopener" data-todo="kmong-store">크몽 스토어</a></li><li><a href="https://open.kakao.com/o/sMmTDOIh" target="_blank" rel="noopener" data-todo="kakao-1on1">카카오톡 1:1 문의</a></li><li><a href="https://open.kakao.com/o/gyV2DOIh" target="_blank" rel="noopener" data-todo="kakao-open">단톡방</a></li><li><a href="https://blog.naver.com/dianarttie" target="_blank" rel="noopener" data-todo="naver-blog">네이버 블로그</a></li></ul></div>
-    <div class="foot-col"><h4>자료</h4><ul><li><a href="resources.html#samples">예시문항 다운로드</a></li><li><a href="resources.html#preview">체험판 다운로드</a></li><li><a href="exam.html#pass-rate">회차별 합격률</a></li></ul></div><div class="foot-col"><h4>정책</h4><ul><li><a href="store.html#faq">환불·교환 안내</a></li><li><span class="cap" style="color:#A89D8C">데이터 출처 — 식약처 · 시행기관</span></li><li><span class="cap" style="color:#A89D8C">© 무단 복제·배포 금지</span></li></ul></div>
+    <div class="foot-col"><h2>탐색</h2><ul><li><a href="index.html">홈</a></li><li><a href="exam.html">시험 정보</a></li><li><a href="resources.html">자료실</a></li><li><a href="store.html">교재 구매</a></li></ul></div>
+    <div class="foot-col"><h2>구매·문의</h2><ul><li><a href="https://kmong.com/self-marketing/770274/e2ForXAvGu" target="_blank" rel="noopener" data-todo="kmong-store">크몽 스토어</a></li><li><a href="https://open.kakao.com/o/sMmTDOIh" target="_blank" rel="noopener" data-todo="kakao-1on1">카카오톡 1:1 문의</a></li><li><a href="https://open.kakao.com/o/gyV2DOIh" target="_blank" rel="noopener" data-todo="kakao-open">단톡방</a></li><li><a href="https://blog.naver.com/dianarttie" target="_blank" rel="noopener" data-todo="naver-blog">네이버 블로그</a></li></ul></div>
+    <div class="foot-col"><h2>자료</h2><ul><li><a href="resources.html#samples">예시문항 다운로드</a></li><li><a href="resources.html#preview">체험판 다운로드</a></li><li><a href="exam.html#pass-rate">회차별 합격률</a></li></ul></div><div class="foot-col"><h2>정책</h2><ul><li><a href="store.html#faq">환불·교환 안내</a></li><li><span class="cap" style="color:#A89D8C">데이터 출처 — 식약처 · 시행기관</span></li><li><span class="cap" style="color:#A89D8C">© 무단 복제·배포 금지</span></li></ul></div>
   </div>
   <div class="wrap foot-base">
     <span>© <span data-year>2026</span> 조제전당 · All rights reserved</span>
@@ -472,6 +475,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>
